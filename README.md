@@ -1,5 +1,5 @@
 # Vacination_App
-vacination application for college final project
+vaccination application for college final project
 
 # Collaborators
 ### Paras Patni
