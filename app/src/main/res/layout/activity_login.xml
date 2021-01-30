@@ -52,7 +52,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:shadowColor="#000000"
-                android:text="Please enter your email adress and password."
+                android:text="Please enter your email address and password."
                 android:textColor="@color/black"
                 android:textSize="18sp" />
 
@@ -136,8 +136,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="10dp"
                 android:background="#F44336"
                 android:padding="17dp"
@@ -145,12 +145,6 @@
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
-
-
-
-
-
 
 
         </LinearLayout>
