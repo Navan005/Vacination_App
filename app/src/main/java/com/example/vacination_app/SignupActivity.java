@@ -29,7 +29,7 @@ public class SignupActivity extends AppCompatActivity {
 
     private Button registerBtn;
     public static final String TAG = "TAG";
-    EditText mFullName,mEmail,mPassword,mPhone;
+    EditText mFullName,mEmail,mPassword,mCPassword,mPhone;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
@@ -43,6 +43,7 @@ public class SignupActivity extends AppCompatActivity {
         mFullName   = findViewById(R.id.etRegName);
         mEmail      = findViewById(R.id.etRegGmail);
         mPassword   = findViewById(R.id.etRegPassword);
+        mCPassword  = findViewById(R.id.etRegCPassword);
         mPhone      = findViewById(R.id.etRegPhone);
 
         fAuth = FirebaseAuth.getInstance();
@@ -54,18 +55,38 @@ public class SignupActivity extends AppCompatActivity {
 
                 final String email = mEmail.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
+                String confirmPass = mCPassword.getText().toString().trim();
                 final String fullName = mFullName.getText().toString();
                 final String phone = mPhone.getText().toString();
 
                 //validates ifs any of the edit text fields is empty.
+                if (TextUtils.isEmpty(fullName)) {
+                    mFullName.setError("Name is Required.");
+                    return;
+                }
 
                 if (TextUtils.isEmpty(email)) {
                     mEmail.setError("Email is Required.");
                     return;
                 }
 
+                if (TextUtils.isEmpty(phone)) {
+                    mPhone.setError("Phone number is Required.");
+                    return;
+                }
+
                 if (TextUtils.isEmpty(password)) {
-                    mPassword.setError("Password is Required.");
+                    mPassword.setError("Name is Required.");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(confirmPass)) {
+                    mCPassword.setError("Confirm password is Required.");
+                    return;
+                }
+
+                if(!password.equals(confirmPass)){
+                    mPassword.setError("Passwords do not match.");
                     return;
                 }
 
