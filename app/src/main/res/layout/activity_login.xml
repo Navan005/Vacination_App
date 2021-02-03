@@ -32,7 +32,7 @@
             android:gravity="center"
             android:text="@string/parent_login_label"
             android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:textSize="21sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -54,9 +54,10 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="15sp"
             android:layout_marginRight="50dp"
-            android:autofillHints=""
+            android:autofillHints="@string/email_address"
             android:hint="@string/email_address"
             android:inputType="textEmailAddress"
+            android:textAlignment="center"
             android:textSize="17sp" />
 
         <EditText
@@ -69,6 +70,7 @@
             android:autofillHints=""
             android:hint="@string/password"
             android:inputType="textPassword"
+            android:textAlignment="center"
             android:textSize="17sp" />
 
 
