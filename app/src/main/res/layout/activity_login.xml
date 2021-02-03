@@ -7,136 +7,126 @@
     android:background="@drawable/gradient_background"
     tools:context=".LoginActivity">
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="UselessParent">
+        <ImageView
+            android:id="@+id/logo_image"
+            android:layout_width="300dp"
+            android:layout_height="168dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="60dp"
+            app:srcCompat="@drawable/logoo" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/Welcome_text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="@string/parent_login_label"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:text="@string/info_email_password"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
-            <ImageView
-                android:id="@+id/logo_image"
-                android:layout_width="300dp"
-                android:layout_height="168dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginRight="60dp"
-                app:srcCompat="@drawable/logoo"
-                android:contentDescription="Logo_image" />
+
+        <EditText
+            android:id="@+id/email_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="50dp"
+            android:autofillHints=""
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/etLoginPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="50dp"
+            android:autofillHints=""
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textSize="17sp" />
+
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_button"
+            android:text="@string/log_in"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/Welcome_text2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/logo_image"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:gravity="center"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:text=" Parent Login"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
-
-            <TextView
+                android:id="@+id/forget_Password"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:shadowColor="#000000"
-                android:text="Please enter your email address and password"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
+                android:layout_weight="1"
+                android:text="@string/forgot_password"
+                android:textAlignment="center"
+                android:textColor="#F9AA33"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-
-            <EditText
-                android:id="@+id/etLogGmail"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/CreateAccount"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15sp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:autofillHints=""
-                android:hint="Email Address"
-                android:inputType="textEmailAddress"
-                android:textSize="17sp" />
-
-            <EditText
-                android:id="@+id/etLoginPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="50dp"
-                android:autofillHints=""
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:textSize="17sp" />
-
-
-            <Button
-                android:id="@+id/btnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginRight="100dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/round_button"
-                android:layout_marginBottom="10dp"
-                android:text="Log In"
-                android:textSize="15sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/forget_Password"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Forgot Password?"
-                    android:textAlignment="center"
-                    android:textColor="#F9AA33"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/CreateAccount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Create an Account"
-                    android:textAlignment="center"
-                    android:textColor="#F9AA33"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/employeeLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="100dp"
-                android:background="@drawable/round_button"
-                android:text="Employee Login"
-                android:textColor="@android:color/white"
-                android:textSize="15sp" />
+                android:layout_weight="1"
+                android:text="@string/create_an_account"
+                android:textAlignment="center"
+                android:textColor="#F9AA33"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
-    </ScrollView>
+
+        <Button
+            android:id="@+id/employeeLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/round_button"
+            android:text="@string/employee_login"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
 
 </RelativeLayout>

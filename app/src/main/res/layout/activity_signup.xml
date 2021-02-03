@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/background_light"
+    android:background="@drawable/gradient_background"
     tools:context=".SignupActivity">
 
     <ScrollView
@@ -25,20 +25,17 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
-                app:srcCompat="@drawable/logoo"
-                />
+                app:srcCompat="@drawable/logoo" />
 
             <TextView
                 android:id="@+id/Welcome_text2"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/logo_image"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                android:shadowColor="#000000"
-                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="50dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
                 android:text="Create Account"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
