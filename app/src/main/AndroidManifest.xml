@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Vacination_App">
-        <activity android:name=".HomepageActivity"></activity>
+        <activity
+            android:name=".MainpageActivity"
+            android:label="@string/title_activity_mainpage"
+            android:theme="@style/Theme.Vacination_App.NoActionBar"></activity>
+        <activity android:name=".HomepageActivity" />
         <activity android:name=".AdminloginActivity" />
         <activity android:name=".PassResetActivity" />
         <activity android:name=".SignupActivity" />
