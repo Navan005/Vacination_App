@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vacination_App">
         <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
+        <activity
             android:name=".MainpageActivity"
             android:label="@string/title_activity_mainpage"
-            android:theme="@style/Theme.Vacination_App.NoActionBar"></activity>
+            android:theme="@style/Theme.Vacination_App.NoActionBar" />
         <activity android:name=".HomepageActivity" />
         <activity android:name=".AdminloginActivity" />
         <activity android:name=".PassResetActivity" />
