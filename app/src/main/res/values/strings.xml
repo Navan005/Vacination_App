@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">My Vaccine</string>
+    <string name="employee_login">Employee Login</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="log_in">Log In</string>
+    <string name="password">Password</string>
+    <string name="email_address">Email Address</string>
+    <string name="info_email_password">Please enter your email address and password</string>
+    <string name="parent_login_label">Parent Login</string>
 </resources>
