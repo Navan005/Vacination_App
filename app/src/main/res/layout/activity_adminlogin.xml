@@ -99,7 +99,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/black"
+                android:background="@drawable/round_button"
                 android:padding="17dp"
                 android:text="Sign In"
                 android:textColor="@android:color/white"
