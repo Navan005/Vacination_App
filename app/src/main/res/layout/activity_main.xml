@@ -51,15 +51,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/main_login_btn"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:layout_marginBottom="5dp"
-        android:background="#0019F3"
+        android:background="@drawable/round_button"
         android:padding="20dp"
         android:text="Create An Account"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/main_login_btn"
@@ -67,13 +67,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:layout_marginBottom="10dp"
-        android:background="#0019F3"
+        android:background="@drawable/round_button"
         android:padding="20dp"
         android:text="Already have an account? Log In"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 </RelativeLayout>
