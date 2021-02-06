@@ -30,7 +30,7 @@
             android:layout_marginRight="50dp"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
-            android:text="@string/parent_login_label"
+            android:text="Parent Login"
             android:textColor="@color/text_Color"
             android:textSize="21sp" />
 
@@ -42,7 +42,7 @@
             android:layout_marginRight="20dp"
             android:gravity="center"
             android:shadowColor="#000000"
-            android:text="@string/info_email_password"
+            android:text="Enter email address and password."
             android:textColor="@color/text_Color"
             android:textSize="18sp" />
 
@@ -54,8 +54,8 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="15sp"
             android:layout_marginRight="50dp"
-            android:autofillHints="@string/email_address"
-            android:hint="@string/email_address"
+            android:autofillHints="Email address"
+            android:hint="Email address"
             android:inputType="textEmailAddress"
             android:textAlignment="center"
             android:textColor="@color/text_Color"
@@ -69,7 +69,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="50dp"
             android:autofillHints=""
-            android:hint="@string/password"
+            android:hint="Password"
             android:inputType="textPassword"
             android:textAlignment="center"
             android:textColor="@color/text_Color"
@@ -85,7 +85,7 @@
             android:layout_marginRight="100dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/round_button"
-            android:text="@string/log_in"
+            android:text="Login"
             android:textColor="@android:color/white"
             android:textSize="15sp" />
 
@@ -100,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/forgot_password"
+                android:text="forgot password?"
                 android:textAlignment="center"
                 android:textColor="@color/text_Color"
                 android:textSize="16sp"
@@ -111,7 +111,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/create_an_account"
+                android:text="Create an account"
                 android:textAlignment="center"
                 android:textColor="@color/text_Color"
                 android:textSize="16sp"
@@ -127,7 +127,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="100dp"
             android:background="@drawable/round_button"
-            android:text="@string/employee_login"
+            android:text="CLSC login"
             android:textColor="@android:color/white"
             android:textSize="15sp" />
 
