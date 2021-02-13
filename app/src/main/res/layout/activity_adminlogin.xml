@@ -28,7 +28,7 @@
                 />
 
             <TextView
-                android:id="@+id/Welcome_text2"
+                android:id="@+id/immunized_label_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/logo_image"
@@ -56,7 +56,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/etLogGmail"
+                android:id="@+id/email_edit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"

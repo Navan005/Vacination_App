@@ -22,7 +22,7 @@
         <activity android:name=".PassResetActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".HomeActivity" />
     </application>
 
 </manifest>

@@ -21,7 +21,7 @@ public class SplashScreen_Activity extends Activity {
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                Intent mainIntent = new Intent(SplashScreen_Activity.this, MainActivity.class);
+                Intent mainIntent = new Intent(SplashScreen_Activity.this, HomeActivity.class);
                 SplashScreen_Activity.this.startActivity(mainIntent);
                 SplashScreen_Activity.this.finish();
             }

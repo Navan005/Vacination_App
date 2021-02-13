@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".MainActivity">
+    tools:context=".HomeActivity">
 
     <ImageView
         android:id="@+id/logo_image"
@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/transparent_logo" />
 
     <TextView
-        android:id="@+id/Welcome_text2"
+        android:id="@+id/immunized_label_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo_image"
@@ -25,23 +25,23 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:fontFamily="sans-serif-light"
         android:text="@string/get_immunized_text"
         android:textColor="@color/text_Color"
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/Welcome_text3"
+        android:id="@+id/introduction_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Welcome_text2"
+        android:layout_below="@id/immunized_label_text"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
-        android:shadowColor="#000000"
         android:text="@string/track_your_immunization_record_text"
         android:textColor="@color/text_Color"
+        android:fontFamily="sans-serif-light"
         android:textSize="24sp" />
 
     <Button
@@ -70,4 +70,6 @@
         android:textColor="@color/text_Color"
         android:textSize="18sp"
         android:textStyle="bold" />
+
+
 </RelativeLayout>
