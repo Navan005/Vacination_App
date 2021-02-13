@@ -21,7 +21,7 @@ import androidx.appcompat.widget.Toolbar;
 public class MainpageActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    private Button addChild;
+    private Button addChild,addChild2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +29,11 @@ public class MainpageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mainpage);
 
         addChild=(Button) findViewById(R.id.addRecords);
+        addChild2=(Button) findViewById(R.id.addRecords2);
+
+        Intent intent = getIntent();
+        String email = intent.getStringExtra("email_key");
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -40,14 +45,25 @@ public class MainpageActivity extends AppCompatActivity {
             }
         });
 
+        /*
         addChild.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainpageActivity.this, AddchildActivity.class);
+                intent.putExtra("email_key", email);
+                startActivity(intent);
+            }
+        });
+
+        addChild2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MainpageActivity.this, AddchildActivity.class);
                 startActivity(intent);
             }
         });
-
+        */
+        
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
