@@ -17,12 +17,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class
-LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
-    private Button joinNowButton, loginButton, employeBtn;
-    private TextView forgotPassword, createBtn;
     EditText mEmail, mPassword;
+    private Button joinNowButton, loginButton, employeeButton;
+    private TextView forgotPassword, createBtn;
     FirebaseAuth fAuth;
 
     @Override
@@ -30,11 +29,11 @@ LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        loginButton=(Button) findViewById(R.id.btnLogin);
-        employeBtn=(Button) findViewById(R.id.employeeLogin);
-        forgotPassword=(TextView) findViewById(R.id.forget_Password);
-        createBtn=(TextView) findViewById(R.id.CreateAccount);
-        mEmail = findViewById(R.id.etLogGmail);
+        loginButton = (Button) findViewById(R.id.btnLogin);
+        employeeButton = (Button) findViewById(R.id.employeeLogin);
+        forgotPassword = (TextView) findViewById(R.id.forget_Password);
+        createBtn = (TextView) findViewById(R.id.CreateAccount);
+        mEmail = findViewById(R.id.email_edit);
         mPassword = findViewById(R.id.etLoginPassword);
         forgotPassword=findViewById(R.id.forget_Password);
         fAuth = FirebaseAuth.getInstance();
@@ -67,9 +66,7 @@ LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(LoginActivity.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(getApplicationContext(), MainpageActivity.class);
-                            intent.putExtra("message_key", email);
-                            startActivity(intent);
+                            startActivity(new Intent(getApplicationContext(), MainpageActivity.class));
                         }else {
                             Toast.makeText(LoginActivity.this, "Error ! " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -96,10 +93,10 @@ LoginActivity extends AppCompatActivity {
             }
         });
 
-        employeBtn.setOnClickListener(new View.OnClickListener() {
+        employeeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(LoginActivity.this, AdminloginActivity.class);
+                Intent intent = new Intent(LoginActivity.this, AdminloginActivity.class);
                 startActivity(intent);
             }
         });

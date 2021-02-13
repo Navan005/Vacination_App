@@ -1,14 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddchildActivity">
 
-    <TextView
-        android:id="@+id/name"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/immunized_label_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="Add a child"
+            android:textColor="@color/text_Color"
+            android:textSize="30sp" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:text="Enter details of your child"
+            android:textColor="@color/text_Color"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/child_nameEditxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="50dp"
+            android:autofillHints="Email address"
+            android:inputType="textEmailAddress"
+            android:hint="Child name"
+            android:textAlignment="center"
+            android:textColor="@color/text_Color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:text="Date of birth"
+            android:textColor="@color/text_Color"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/dateofbirth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="50dp"
+            android:autofillHints="Email address"
+            android:inputType="textEmailAddress"
+            android:hint="Age"
+            android:textAlignment="center"
+            android:textColor="@color/text_Color"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:text="Gender"
+            android:textColor="@color/text_Color"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:id="@+id/radioGroup">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:id="@+id/male_radio"
+                android:text="Male"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fmale_radio"
+                android:layout_marginLeft="20dp"
+                android:text="Female"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_addchild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_button"
+            android:text="Add a child"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Admin_dashboard"></activity>
         <activity android:name=".SplashScreen_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +22,7 @@
         <activity android:name=".PassResetActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
