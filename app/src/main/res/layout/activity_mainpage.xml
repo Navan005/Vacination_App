@@ -28,7 +28,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
-                app:srcCompat="@drawable/logoo"
+                app:srcCompat="@drawable/transparent_logo"
                 />
 
             <LinearLayout

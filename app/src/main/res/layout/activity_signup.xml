@@ -25,7 +25,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
-                app:srcCompat="@drawable/logoo" />
+                app:srcCompat="@drawable/transparent_logo" />
 
             <TextView
                 android:id="@+id/Welcome_text2"
