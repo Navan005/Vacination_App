@@ -16,79 +16,54 @@ import android.widget.TextView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ParentshomepageActivity extends AppCompatActivity {
 
-   private RecyclerView mChildList;
-   private FirebaseFirestore firebaseFirestore;
-
-   private FirestoreRecyclerAdapter adapter;
+    private List<ChildDisplay> listData;
+    private RecyclerView rv;
+    private ChidrenAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parentshomepage);
 
-        mChildList=findViewById(R.id.recyclerview);
-        firebaseFirestore=FirebaseFirestore.getInstance();
+        rv=(RecyclerView)findViewById(R.id.recyclerview);
+        rv.setHasFixedSize(true);
+        rv.setLayoutManager(new LinearLayoutManager(this));
+        listData=new ArrayList<>();
 
-        Query query=firebaseFirestore.collection("children");
-
-        FirestoreRecyclerOptions<ChildDisplay> options = new FirestoreRecyclerOptions.Builder<ChildDisplay>()
-                .setQuery(query, ChildDisplay.class)
-                .build();
-
-        adapter = new FirestoreRecyclerAdapter<ChildDisplay, ProductsViewHolder>(options) {
-            @NonNull
+        final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Children");
+        nm.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public ProductsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-               View view=LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_child, parent, false);
-                return new ProductsViewHolder(view);
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()){
+                    for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
+                        ChildDisplay l=npsnapshot.getValue(ChildDisplay.class);
+                        listData.add(l);
+                    }
+                    adapter=new ChidrenAdapter(listData);
+                    rv.setAdapter(adapter);
+
+                }
             }
 
             @Override
-            protected void onBindViewHolder(@NonNull ProductsViewHolder productsViewHolder, int i   , @NonNull ChildDisplay childDisplay) {
-                productsViewHolder.child_name.setText(childDisplay.getChild_name());
-                productsViewHolder.child_age.setText(childDisplay.getAge());
+            public void onCancelled(DatabaseError databaseError) {
+
             }
-        };
-
-        mChildList.setHasFixedSize(true);
-        mChildList.setLayoutManager(new LinearLayoutManager(this));
-        mChildList.setAdapter(adapter);
-
+        });
 
     }
-
-    private class ProductsViewHolder extends RecyclerView.ViewHolder {
-
-        private TextView child_name,child_age;
-
-        public ProductsViewHolder(@NonNull View itemView) {
-            super(itemView);
-
-            child_name=itemView.findViewById(R.id.childNametxt);
-            child_age= itemView.findViewById(R.id.childAgetxt);
-
-
-        }
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        adapter.stopListening();
-    }
-    
-    @Override
-    public void onStart() {
-        super.onStart();
-        adapter.startListening();
-    }
-
-
-
 }
