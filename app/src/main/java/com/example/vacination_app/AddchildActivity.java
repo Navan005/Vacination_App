@@ -16,11 +16,7 @@ public class AddchildActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addchild);
-
-        name=findViewById(R.id.name);
-        Intent intent = getIntent();
-        String email = intent.getStringExtra("email_key");
-        name.setText(email);
+        
 
     }
 }

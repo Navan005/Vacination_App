@@ -20,7 +20,7 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainpageActivity extends AppCompatActivity {
 
-    
+
     private Button addChild,addChild2;
 
     @Override
