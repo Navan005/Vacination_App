@@ -9,13 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".recommended_VaccineList_RecyclerView"></activity>
-        <activity android:name=".child_vaccineList" />
-        <activity android:name=".vaccine_detailview" />
-        <activity android:name=".AddchildActivity" />
+        <activity android:name=".AddchildActivity"></activity>
         <activity
             android:name=".MainpageActivity"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"></activity>
         <activity android:name=".HomepageActivity" />
         <activity android:name=".AdminloginActivity" />
         <activity android:name=".PassResetActivity" />
