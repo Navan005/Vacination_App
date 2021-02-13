@@ -43,7 +43,7 @@
 
 
         <EditText
-            android:id="@+id/etLogGmail"
+            android:id="@+id/child_nameEditxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
@@ -117,7 +117,7 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/btn_addchild"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
