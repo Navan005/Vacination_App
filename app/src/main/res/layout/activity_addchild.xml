@@ -68,17 +68,19 @@
             android:textColor="@color/text_Color"
             android:textSize="18sp" />
 
-        <DatePicker
-            android:id="@+id/etLoginPassword"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/dateofbirth"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:datePickerMode="spinner"
-            android:calendarViewShown="false"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="15sp"
             android:layout_marginRight="50dp"
-            android:textSize="17sp"
-            />
+            android:autofillHints="Email address"
+            android:inputType="textEmailAddress"
+            android:hint="Age"
+            android:textAlignment="center"
+            android:textColor="@color/text_Color"
+            android:textSize="17sp" />
 
         <TextView
             android:layout_width="wrap_content"
