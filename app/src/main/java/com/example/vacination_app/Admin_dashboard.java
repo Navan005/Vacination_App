@@ -30,7 +30,7 @@ public class Admin_dashboard extends AppCompatActivity {
         appointmentHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Admin_dashboard.this, Admin_dashboard.class);
+                Intent intent = new Intent(Admin_dashboard.this, AppointmentHistoryActivity.class);
                 startActivity(intent);
             }
         });
