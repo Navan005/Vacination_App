@@ -1,51 +1,50 @@
 package com.example.vacination_app;
-
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
-public class ChidrenAdapter  extends RecyclerView.Adapter<ChidrenAdapter.ViewHolder>{
+public class VaccineAdapter extends RecyclerView.Adapter<VaccineAdapter.ViewHolder>{
 
-    private List<ChildDisplay> listData;
+
+    private List<VaccineDisplay> listData;
     private Context mContext ;
 
-    public ChidrenAdapter(Context mContext,List<ChildDisplay> listData) {
+    public VaccineAdapter(Context mContext,List<VaccineDisplay> listData) {
         this.listData = listData;
         this.mContext = mContext;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public VaccineAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_child,parent,false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ChildDisplay ld=listData.get(position);
-        holder.txtname.setText(ld.getChild_name());
-        holder.txtage.setText(ld.getAge());
+    public void onBindViewHolder(@NonNull VaccineAdapter.ViewHolder holder, int position) {
+        VaccineDisplay ld=listData.get(position);
+        holder.txtname.setText(ld.getName());
+        holder.txtage.setText(ld.getRecommendedAge());
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(mContext,child_vaccineList.class);
+                Intent intent = new Intent(mContext,vaccine_detailview.class);
 
                 // passing data to the Product activity.
-                intent.putExtra("Name",listData.get(position).getChild_name());
-                intent.putExtra("Age",listData.get(position).getAge());
+                intent.putExtra("Name",listData.get(position).getName());
+                intent.putExtra("Description",listData.get(position).getDescription());
+                intent.putExtra("Age",listData.get(position).getRecommendedAge());
 
                 mContext.startActivity(intent);
 

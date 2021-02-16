@@ -5,8 +5,16 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class child_vaccineList extends AppCompatActivity {
@@ -34,6 +42,35 @@ public class child_vaccineList extends AppCompatActivity {
         childName.setText(Title);
 
         //Recycler view for vaccines
+
+        //Recycler view
+        rv=(RecyclerView)findViewById(R.id.recyclerviewVaccine);
+        rv.setHasFixedSize(true);
+        rv.setLayoutManager(new LinearLayoutManager(this));
+        listData=new ArrayList<>();
+
+        final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Vaccines");
+        nm.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()){
+                    for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
+                        VaccineDisplay l=npsnapshot.getValue(VaccineDisplay.class);
+                        listData.add(l);
+                    }
+                    adapter=new VaccineAdapter(child_vaccineList.this,listData);
+                    rv.setAdapter(adapter);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
 
     }
 }

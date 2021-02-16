@@ -7,13 +7,63 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:id="@+id/Vaccine_label"
+        android:id="@+id/vaccine_name"
+        android:layout_marginTop="30dp"
         android:layout_height="wrap_content"
         android:text="Vaccine Label"
-        android:textSize="25sp" />
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginStart="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/vaccine_name"
+        android:id="@+id/vaccine_age_layout"
+        android:layout_marginStart="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/vaccine_age_label"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="Recommended Age:"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/vaccine_age"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:text="Vaccine Label"
+        android:layout_marginStart="30dp"
+        android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/vaccine_description_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/vaccine_age_layout"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_vertical"
+        android:text="Description:"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
 
     <TextView
         android:id="@+id/vaccine_description"
+        android:layout_below="@id/vaccine_description_label"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
