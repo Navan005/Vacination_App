@@ -50,7 +50,7 @@
 
 
         <EditText
-            android:id="@+id/email_editText"
+            android:id="@+id/email_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
