@@ -69,44 +69,19 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/child_gender_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/child_age_layout"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="25dp"
-        android:orientation="horizontal"
-        android:weightSum="2">
 
-        <TextView
-            android:id="@+id/child_gender_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/child_gender_label_text" />
-
-        <TextView
-            android:id="@+id/child_gender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/gender" />
-
-    </LinearLayout>
 
     <TextView
         android:id="@+id/immunized_label_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/child_gender_layout"
+        android:layout_below="@id/child_age_layout"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:shadowColor="#000000"
-        android:text="My Records"
+        android:text="Vaccines recommended"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="24sp" />

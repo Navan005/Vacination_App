@@ -53,7 +53,7 @@ public class ParentshomepageActivity extends AppCompatActivity {
                         ChildDisplay l=npsnapshot.getValue(ChildDisplay.class);
                         listData.add(l);
                     }
-                    adapter=new ChidrenAdapter(listData);
+                    adapter=new ChidrenAdapter(ParentshomepageActivity.this,listData);
                     rv.setAdapter(adapter);
 
                 }
