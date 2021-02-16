@@ -5,11 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".child_vaccineList">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
     <TextView
         android:id="@+id/child_info_label"
         android:layout_width="match_parent"
@@ -75,44 +70,54 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/child_gender_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/Welcome_text2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/logo_image"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:shadowColor="#000000"
-            android:textAlignment="center"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="Recommended Vaccines"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
+        android:layout_below="@id/child_age_layout"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
-        <Button
-            android:id="@+id/addRecords"
+        <TextView
+            android:id="@+id/child_gender_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp"
-            android:background="@color/black"
-            android:text="+"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_weight="1"
+            android:text="@string/child_gender_label_text" />
+
+        <TextView
+            android:id="@+id/child_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/gender" />
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/immunized_label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/child_gender_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:shadowColor="#000000"
+        android:text="My Records"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewVaccines"
+        android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/immunized_label_text"
+        android:layout_marginTop="20dp">
 
     </androidx.recyclerview.widget.RecyclerView>
-    </LinearLayout>
+
 </RelativeLayout>

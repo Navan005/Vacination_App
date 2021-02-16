@@ -21,7 +21,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="60dp"
             android:layout_marginRight="60dp"
-            app:srcCompat="@drawable/logoo"
+            app:srcCompat="@drawable/transparent_logo"
             />
 
         <LinearLayout
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:id="@+id/Welcome_text2"
+                android:id="@+id/immunized_label_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/logo_image"

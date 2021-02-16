@@ -1,6 +1,5 @@
 package com.example.vacination_app;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,12 +16,12 @@ public class SplashScreen_Activity extends Activity {
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
         /** Duration of wait **/
-        int SPLASH_DISPLAY_LENGTH = 1000;
+        int SPLASH_DISPLAY_LENGTH = 1250;
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {
                 /* Create an Intent that will start the Menu-Activity. */
-                Intent mainIntent = new Intent(SplashScreen_Activity.this, MainActivity.class);
+                Intent mainIntent = new Intent(SplashScreen_Activity.this, HomeActivity.class);
                 SplashScreen_Activity.this.startActivity(mainIntent);
                 SplashScreen_Activity.this.finish();
             }

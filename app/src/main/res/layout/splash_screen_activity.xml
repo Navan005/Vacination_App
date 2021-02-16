@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_width="fill_parent"
+    android:background="@drawable/gradient_background"
     android:layout_height="fill_parent"
+    android:orientation="vertical"
     tools:context=".SplashScreen_Activity">
 
-    <ImageView android:id="@+id/splashscreen"
+    <ImageView
+        android:id="@+id/splashscreen"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:src="@drawable/logoo"
-        android:layout_gravity="center"/>
-
-    <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World, splash"/>
+        android:layout_centerInParent="true"
+        android:src="@drawable/transparent_logo" />
 
-</LinearLayout>
+</RelativeLayout>

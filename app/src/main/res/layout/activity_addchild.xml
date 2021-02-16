@@ -14,7 +14,7 @@
 
 
         <TextView
-            android:id="@+id/Welcome_text2"
+            android:id="@+id/immunized_label_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
