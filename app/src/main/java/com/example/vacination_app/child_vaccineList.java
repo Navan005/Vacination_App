@@ -5,10 +5,18 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
 
 public class child_vaccineList extends AppCompatActivity {
 
     TextView childName, childAge;
+
+    //Recycler view
+    private List<VaccineDisplay> listData;
+    private RecyclerView rv;
+    private VaccineAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,5 +32,8 @@ public class child_vaccineList extends AppCompatActivity {
 
         childAge.setText(Description);
         childName.setText(Title);
+
+        //Recycler view for vaccines
+
     }
 }
