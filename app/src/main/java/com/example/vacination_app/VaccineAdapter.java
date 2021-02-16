@@ -33,7 +33,7 @@ public class VaccineAdapter extends RecyclerView.Adapter<VaccineAdapter.ViewHold
     public void onBindViewHolder(@NonNull VaccineAdapter.ViewHolder holder, int position) {
         VaccineDisplay ld=listData.get(position);
         holder.txtname.setText(ld.getName());
-        holder.txtage.setText(ld.getRecommendedAge());
+        holder.txtage.setText(ld.getRecommendedAge() + " year");
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override

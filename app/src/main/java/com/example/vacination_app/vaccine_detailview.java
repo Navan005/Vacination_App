@@ -25,7 +25,7 @@ public class vaccine_detailview extends AppCompatActivity {
         String Age = intent.getExtras().getString("Age");
 
         vaccineName.setText(Title);
-        vaccineAge.setText(Age);
+        vaccineAge.setText(Age + " year");
         vaccineDescription.setText(Description);
 
     }
