@@ -39,6 +39,7 @@ public class ParentshomepageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parentshomepage);
 
+        //Recycler view
         rv=(RecyclerView)findViewById(R.id.recyclerview);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(this));
