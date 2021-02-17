@@ -1,4 +1,5 @@
 package com.example.vacination_app;
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -9,56 +10,56 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
 
-public class VaccineAdapter extends RecyclerView.Adapter<VaccineAdapter.ViewHolder>{
+public class AppointmentAdapter  extends RecyclerView.Adapter<AppointmentAdapter.ViewHolder>{
 
-    private List<VaccineDisplay> listData;
+    private List<AppointmentDisplay> listData;
     private Context mContext ;
 
-    public VaccineAdapter(Context mContext,List<VaccineDisplay> listData) {
+    public AppointmentAdapter(Context mContext,List<AppointmentDisplay> listData) {
         this.listData = listData;
         this.mContext = mContext;
     }
 
     @NonNull
     @Override
-    public VaccineAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AppointmentAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_child,parent,false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VaccineAdapter.ViewHolder holder, int position) {
-        VaccineDisplay ld=listData.get(position);
-        holder.txtname.setText(ld.getName());
-        holder.txtage.setText(ld.getRecommendedAge() + " year");
+    public void onBindViewHolder(@NonNull AppointmentAdapter.ViewHolder holder, int position) {
+        AppointmentDisplay ld=listData.get(position);
+        holder.txtname.setText("Vaccine: " + ld.getVaccineRequested());
+        holder.txtage.setText("Date: " +ld.getAppointmentDate());
+
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                Intent intent = new Intent(mContext,child_vaccineList.class);
 
-
-                Intent intent = new Intent(mContext,vaccine_detailview.class);
-
-                //String parentName = intent.getExtras().getString("email");
                 // passing data to the Product activity.
-                intent.putExtra("Name",listData.get(position).getName());
-                intent.putExtra("Description",listData.get(position).getDescription());
-                intent.putExtra("Age",listData.get(position).getRecommendedAge());
-                //intent.putExtra("parentNamee",parentName);
-
+                intent.putExtra("vaccine",listData.get(position).getVaccineRequested());
+                intent.putExtra("appointmentDate",listData.get(position).getAppointmentDate());
+                intent.putExtra("parentName",listData.get(position).getParentName());
 
                 mContext.startActivity(intent);
+
             }
         });
+
     }
 
     @Override
     public int getItemCount() {
         return listData.size();
     }
+
     public class ViewHolder extends RecyclerView.ViewHolder{
         CardView cardView;
         private TextView txtname,txtage;

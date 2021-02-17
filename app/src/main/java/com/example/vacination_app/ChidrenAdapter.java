@@ -46,6 +46,7 @@ public class ChidrenAdapter  extends RecyclerView.Adapter<ChidrenAdapter.ViewHol
                 // passing data to the Product activity.
                 intent.putExtra("Name",listData.get(position).getChild_name());
                 intent.putExtra("Age",listData.get(position).getAge());
+                intent.putExtra("parentName",listData.get(position).getParent_name());
 
                 mContext.startActivity(intent);
 

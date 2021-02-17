@@ -38,6 +38,8 @@ public class child_vaccineList extends AppCompatActivity {
         Intent intent = getIntent();
         String Title = intent.getExtras().getString("Name");
         String Description = intent.getExtras().getString("Age");
+        String parentName = intent.getExtras().getString("parentName");
+
 
         childAge.setText(Description);
         childName.setText(Title);
@@ -60,6 +62,7 @@ public class child_vaccineList extends AppCompatActivity {
                         listData.add(l);
                     }
                     adapter=new VaccineAdapter(child_vaccineList.this,listData);
+                    //intent.putExtra("email", parentName);
                     rv.setAdapter(adapter);
                 }
             }
