@@ -38,9 +38,11 @@ public class PendingAppointmentActivity extends AppCompatActivity {
         rv.setLayoutManager(new LinearLayoutManager(this));
         listData=new ArrayList<>();
 
-        final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Appointment");
+        String notSet="not yet";
 
-        nm.addListenerForSingleValueEvent(new ValueEventListener() {
+        final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Appointment");
+        Query query = nm.orderByChild("appointmentDate").equalTo(notSet);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){

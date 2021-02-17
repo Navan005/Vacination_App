@@ -13,46 +13,28 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class AppointmentAdapter  extends RecyclerView.Adapter<AppointmentAdapter.ViewHolder>{
+public class AppointmentHistoryAdapter extends RecyclerView.Adapter<AppointmentHistoryAdapter.ViewHolder>{
 
     private List<AppointmentDisplay> listData;
     private Context mContext ;
 
-    public AppointmentAdapter(Context mContext,List<AppointmentDisplay> listData) {
+    public AppointmentHistoryAdapter(Context mContext,List<AppointmentDisplay> listData) {
         this.listData = listData;
         this.mContext = mContext;
     }
 
     @NonNull
     @Override
-    public AppointmentAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AppointmentHistoryAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview_child,parent,false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AppointmentAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AppointmentHistoryAdapter.ViewHolder holder, int position) {
         AppointmentDisplay ld=listData.get(position);
         holder.txtname.setText("Vaccine: " + ld.getVaccineRequested());
         holder.txtage.setText("Date: " +ld.getAppointmentDate());
-
-
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(mContext,ConfirmAppointmentActivity.class);
-
-                // passing data to the Product activity.
-                intent.putExtra("vaccine",listData.get(position).getVaccineRequested());
-                intent.putExtra("appointmentDate",listData.get(position).getAppointmentDate());
-                intent.putExtra("parentName",listData.get(position).getParentName());
-
-                mContext.startActivity(intent);
-
-            }
-        });
-
     }
 
     @Override
