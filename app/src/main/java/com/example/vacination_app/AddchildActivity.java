@@ -32,13 +32,15 @@ public class AddchildActivity extends AppCompatActivity {
         childrn= FirebaseDatabase.getInstance().getReference().child("Children");
         member=new AddingChild();
 
+        String Total=getIntent().getStringExtra("email");
+
         addChild.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 String child_name=childName.getText().toString();
                 String age=childAge.getText().toString();
-                String parentname="ok";
+                String parentname=Total;
 
                 member.setchild_name(child_name);
                 member.setage(age);
@@ -46,7 +48,7 @@ public class AddchildActivity extends AppCompatActivity {
                 childrn.push().setValue(member);
 
                 Intent intent=new Intent(AddchildActivity.this, ParentshomepageActivity.class);
-                //intent.putExtra("email_key", email);
+                intent.putExtra("email", Total);
                 startActivity(intent);
             }
         });
