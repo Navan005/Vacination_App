@@ -12,6 +12,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -41,16 +42,16 @@ public class child_vaccineList extends AppCompatActivity {
         childAge.setText(Description);
         childName.setText(Title);
 
-        //Recycler view for vaccines
-
         //Recycler view
         rv=(RecyclerView)findViewById(R.id.recyclerviewVaccine);
         rv.setHasFixedSize(true);
         rv.setLayoutManager(new LinearLayoutManager(this));
         listData=new ArrayList<>();
 
+
         final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Vaccines");
         nm.addListenerForSingleValueEvent(new ValueEventListener() {
+
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()){
@@ -60,7 +61,6 @@ public class child_vaccineList extends AppCompatActivity {
                     }
                     adapter=new VaccineAdapter(child_vaccineList.this,listData);
                     rv.setAdapter(adapter);
-
                 }
             }
 
@@ -69,8 +69,5 @@ public class child_vaccineList extends AppCompatActivity {
 
             }
         });
-
-
-
     }
 }

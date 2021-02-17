@@ -13,7 +13,6 @@ import java.util.List;
 
 public class VaccineAdapter extends RecyclerView.Adapter<VaccineAdapter.ViewHolder>{
 
-
     private List<VaccineDisplay> listData;
     private Context mContext ;
 
@@ -47,17 +46,14 @@ public class VaccineAdapter extends RecyclerView.Adapter<VaccineAdapter.ViewHold
                 intent.putExtra("Age",listData.get(position).getRecommendedAge());
 
                 mContext.startActivity(intent);
-
             }
         });
-
     }
 
     @Override
     public int getItemCount() {
         return listData.size();
     }
-
     public class ViewHolder extends RecyclerView.ViewHolder{
         CardView cardView;
         private TextView txtname,txtage;
