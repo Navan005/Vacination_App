@@ -6,9 +6,18 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
 
@@ -16,6 +25,9 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
 
     TextView date, vaccineName, parentEmail;
     DatePickerDialog datePickerDialog;
+    Button appointmentBtn;
+
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +42,37 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
 
         vaccineName = (TextView) findViewById(R.id.vaccine_name);
         parentEmail = (TextView) findViewById(R.id.parent_email);
+        appointmentBtn=findViewById(R.id.appointment_button);
 
         vaccineName.setText(Title);
         parentEmail.setText(parentName);
 
 
+
+        /*
+        final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Appointment");
+        Query query = nm.orderByChild("parentName").equalTo(parentName);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                dataSnapshot.getRef().child("appointmentDate").setValue(date);
+
+                }
+
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+*/
+
+
+
+
         // initiate the date picker and a button
         date = (TextView) findViewById(R.id.appointmentDate);
+
         // perform click event on edit text
         date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +99,13 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
             }
         });
 
+        appointmentBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ConfirmAppointmentActivity.this, MainpageActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
