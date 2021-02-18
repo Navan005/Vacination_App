@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeletingchildActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/immunized_label_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="Edit child information"
+            android:textColor="@color/text_Color"
+            android:textSize="30sp" />
+
+
+
+
+
+
+        <EditText
+            android:id="@+id/childNametxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="50dp"
+            android:autofillHints="Email address"
+            android:inputType="textEmailAddress"
+            android:hint="Child name"
+            android:textAlignment="center"
+            android:textColor="@color/text_Color"
+            android:textSize="17sp" />
+
+
+
+        <EditText
+            android:id="@+id/childAgetxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="50dp"
+            android:autofillHints="Email address"
+            android:inputType="textEmailAddress"
+            android:hint="Age"
+            android:textAlignment="center"
+            android:textColor="@color/text_Color"
+            android:textSize="17sp" />
+
+
+
+
+
+        <Button
+            android:id="@+id/btn_editInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_button"
+            android:text="Edit Info"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_deleteChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/round_button"
+            android:text="Delete Child"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

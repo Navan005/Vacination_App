@@ -1,5 +1,6 @@
 package com.example.vacination_app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -27,6 +28,7 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
     DatePickerDialog datePickerDialog;
     Button appointmentBtn;
 
+    AddingAppointment member;
     
 
     @Override
@@ -48,27 +50,7 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
         parentEmail.setText(parentName);
 
 
-
-        /*
-        final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Appointment");
-        Query query = nm.orderByChild("parentName").equalTo(parentName);
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                dataSnapshot.getRef().child("appointmentDate").setValue(date);
-
-                }
-
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-*/
-
-
-
+        member=new AddingAppointment();
 
         // initiate the date picker and a button
         date = (TextView) findViewById(R.id.appointmentDate);
@@ -102,8 +84,44 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
         appointmentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ConfirmAppointmentActivity.this, ParentshomepageActivity.class);
-                startActivity(intent);
+
+
+
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Appointment");
+                Query query=databaseReference.orderByChild("parent_name").equalTo(parentName).limitToFirst(1);
+                query.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                        String dateee = date.getText().toString();
+/*
+                            String a=dataSnapshot.getKey();
+                            databaseReference.child(a).child("appointmentDate").setValue(dateee);
+                            */
+                        //databaseReference.removeValue();
+
+
+
+
+                        member.setParentName(parentName);
+                        member.setVaccineRequested(Title);
+                        member.setAppointmentDate(dateee);
+                        databaseReference.push().setValue(member);
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+
+
+                //Intent intent = new Intent(ConfirmAppointmentActivity.this, ParentshomepageActivity.class);
+                //startActivity(intent);
+
             }
         });
 

@@ -69,13 +69,25 @@
 
     </LinearLayout>
 
-
+    <TextView
+        android:id="@+id/delete_child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/child_age_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Delete Child"
+        android:textAlignment="center"
+        android:textColor="#0138FF"
+        />
 
     <TextView
         android:id="@+id/immunized_label_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/child_age_layout"
+        android:layout_below="@id/delete_child"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"

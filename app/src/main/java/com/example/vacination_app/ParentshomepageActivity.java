@@ -17,6 +17,8 @@ import android.widget.TextView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -43,7 +45,10 @@ public class ParentshomepageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_parentshomepage);
 
         addChild=(Button) findViewById(R.id.addRecords);
-        String Total=getIntent().getStringExtra("email");
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String Total = user.getEmail();
+        //String Total=getIntent().getStringExtra("email");
 
         //Recycler view
         rv=(RecyclerView)findViewById(R.id.recyclerview);

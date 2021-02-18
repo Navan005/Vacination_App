@@ -2,6 +2,7 @@ package com.example.vacination_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +21,7 @@ import java.util.List;
 
 public class child_vaccineList extends AppCompatActivity {
 
-    TextView childName, childAge;
+    TextView childName, childAge, deleteChild;
 
     //Recycler view
     private List<VaccineDisplay> listData;
@@ -34,6 +35,7 @@ public class child_vaccineList extends AppCompatActivity {
 
         childName=findViewById(R.id.child_name);
         childAge=findViewById(R.id.child_age);
+        deleteChild=findViewById(R.id.delete_child);
 
         Intent intent = getIntent();
         String Title = intent.getExtras().getString("Name");
@@ -71,6 +73,18 @@ public class child_vaccineList extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
+            }
+        });
+
+
+        deleteChild.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(child_vaccineList.this, DeletingchildActivity.class);
+                intent.putExtra("name", Title);
+                intent.putExtra("age", Description);
+                intent.putExtra("parentname", parentName);
+                startActivity(intent);
             }
         });
     }
