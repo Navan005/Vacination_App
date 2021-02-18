@@ -17,6 +17,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -68,9 +73,37 @@ public class LoginActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             String email = mEmail.getText().toString();
                             Toast.makeText(LoginActivity.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(LoginActivity.this, ParentshomepageActivity.class);
-                            intent.putExtra("email", email);
-                            startActivity(intent);
+
+
+
+                            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Children");
+                            databaseReference.orderByChild("parent_name").equalTo(email).addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                    if (dataSnapshot.exists()) {
+                                        Intent intent = new Intent(LoginActivity.this, ParentshomepageActivity.class);
+                                        intent.putExtra("email", email);
+                                        startActivity(intent);
+                                        //check your password in the same way and grant access if it exists too
+                                    } else {
+                                        Intent intent = new Intent(LoginActivity.this, MainpageActivity.class);
+                                        intent.putExtra("email", email);
+                                        startActivity(intent);
+
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                }
+                                });
+
+
+
+
+
+
 
                         }
                         else {

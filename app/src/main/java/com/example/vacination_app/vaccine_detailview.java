@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -60,6 +61,7 @@ public class vaccine_detailview extends AppCompatActivity {
                 member.setAppointmentDate(datee);
                 appointments.push().setValue(member);
 
+                Toast.makeText(vaccine_detailview.this, "Appointment booked!", Toast.LENGTH_SHORT).show();
                 //Intent intent=new Intent(vaccine_detailview.this, ParentshomepageActivity.class);
                 //intent.putExtra("email", Total);
                 //startActivity(intent);

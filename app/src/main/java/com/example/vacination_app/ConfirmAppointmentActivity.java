@@ -102,7 +102,7 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
         appointmentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ConfirmAppointmentActivity.this, MainpageActivity.class);
+                Intent intent = new Intent(ConfirmAppointmentActivity.this, ParentshomepageActivity.class);
                 startActivity(intent);
             }
         });
