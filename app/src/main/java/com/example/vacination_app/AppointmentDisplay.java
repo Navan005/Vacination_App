@@ -5,6 +5,7 @@ public class AppointmentDisplay {
     private String parentName;
     private String appointmentDate;
     private String vaccineRequested;
+    private String id;
 
     public AppointmentDisplay() {
 
@@ -14,7 +15,10 @@ public class AppointmentDisplay {
         this.parentName=parentName;
         this.vaccineRequested=vaccineRequested;
         this.appointmentDate=appointmentDate;
+    }
 
+    public String getId() {
+        return id;
     }
 
     public String getParentName() {
@@ -27,4 +31,7 @@ public class AppointmentDisplay {
         return appointmentDate;
     }
 
+    public void setId(String id){
+        this.id = id;
+    }
 }

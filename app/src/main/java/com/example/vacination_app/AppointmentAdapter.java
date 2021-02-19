@@ -44,6 +44,7 @@ public class AppointmentAdapter  extends RecyclerView.Adapter<AppointmentAdapter
                 Intent intent = new Intent(mContext,ConfirmAppointmentActivity.class);
 
                 // passing data to the Product activity.
+                intent.putExtra("id", listData.get(position).getId());
                 intent.putExtra("vaccine",listData.get(position).getVaccineRequested());
                 intent.putExtra("appointmentDate",listData.get(position).getAppointmentDate());
                 intent.putExtra("parentName",listData.get(position).getParentName());

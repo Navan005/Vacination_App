@@ -1,6 +1,7 @@
 package com.example.vacination_app;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -11,7 +12,10 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +25,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ConfirmAppointmentActivity extends AppCompatActivity {
 
@@ -41,7 +47,7 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
         String Title = intent.getExtras().getString("vaccine");
         //String appointment_date = intent.getExtras().getString("appointmentDate");
         String parentName = intent.getExtras().getString("parentName");
-
+        String appointmentId = intent.getStringExtra("id");
         vaccineName = (TextView) findViewById(R.id.vaccine_name);
         parentEmail = (TextView) findViewById(R.id.parent_email);
         appointmentBtn=findViewById(R.id.appointment_button);
@@ -87,38 +93,19 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
 
 
 
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Appointment");
-                Query query=databaseReference.orderByChild("parent_name").equalTo(parentName).limitToFirst(1);
-                query.addListenerForSingleValueEvent(new ValueEventListener() {
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Appointment").child(appointmentId);
+
+                Map<String, Object> data = new HashMap<>();
+                data.put("appointmentDate", date.getText().toString());
+
+                databaseReference.updateChildren(data, new DatabaseReference.CompletionListener() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-
-                        String dateee = date.getText().toString();
-/*
-                            String a=dataSnapshot.getKey();
-                            databaseReference.child(a).child("appointmentDate").setValue(dateee);
-                            */
-                        //databaseReference.removeValue();
-
-
-
-
-                        member.setParentName(parentName);
-                        member.setVaccineRequested(Title);
-                        member.setAppointmentDate(dateee);
-                        databaseReference.push().setValue(member);
-
-
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                        if(error == null){
+                            Toast.makeText(getApplicationContext(), "Appointment booked successfullly", Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
-
-
-
                 //Intent intent = new Intent(ConfirmAppointmentActivity.this, ParentshomepageActivity.class);
                 //startActivity(intent);
 

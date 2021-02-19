@@ -48,6 +48,7 @@ public class PendingAppointmentActivity extends AppCompatActivity {
                 if (dataSnapshot.exists()){
                     for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                         AppointmentDisplay l=npsnapshot.getValue(AppointmentDisplay.class);
+                        l.setId(npsnapshot.getKey());
                         listData.add(l);
                     }
                     adapter=new AppointmentAdapter(PendingAppointmentActivity.this,listData);
