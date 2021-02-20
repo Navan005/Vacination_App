@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@drawable/gradient_background"
     tools:openDrawer="start">
 
     <ScrollView
@@ -18,51 +19,46 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-
-
             <ImageView
                 android:id="@+id/logo_image"
-                android:layout_width="300dp"
-                android:layout_height="168dp"
-                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
                 app:srcCompat="@drawable/transparent_logo"
-                />
+                android:contentDescription="@string/logo_image_description" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/immunized_label_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/logo_image"
-                    android:layout_centerHorizontal="true"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
-                    android:shadowColor="#000000"
                     android:textAlignment="center"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="My Records"
-                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/my_records"
+                    android:textColor="@color/creme_white"
                     android:textSize="24sp" />
 
                 <Button
                     android:id="@+id/addRecords"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_marginTop="20dp"
-                    android:background="@color/black"
-                    android:text="+"
-                    android:textColor="@android:color/white"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:background="@drawable/round_button"
+                    android:text="@string/plus"
+                    android:textColor="@color/creme_white"
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -70,7 +66,8 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:layout_gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -79,46 +76,36 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="60dp"
                     android:textAlignment="center"
+                    android:contentDescription="@string/logo_image_description"
                     app:srcCompat="@drawable/family" />
 
                 <TextView
                     android:id="@+id/familyText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/logo_image"
-                    android:layout_centerHorizontal="true"
                     android:textAlignment="center"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginRight="20dp"
-                    android:shadowColor="#000000"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:text="Start by creating records for your family members"
-                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/start_by_creating_records_for_your_family_members"
+                    android:textColor="@color/Blue"
                     android:textSize="24sp" />
 
-
-
             </LinearLayout>
-
-
-
 
             <Button
                 android:id="@+id/addRecords2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/black"
-                android:padding="17dp"
-                android:text="New Record"
-                android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
+                android:background="@drawable/round_button"
+                android:text="@string/new_record"
+                android:textColor="@color/creme_white"
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -129,30 +116,28 @@
                     android:id="@+id/forget_Password"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Settings"
-                    android:textColor="#B30000"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif-light"
                     android:textSize="20sp"
+                    android:text="@string/settings_label"
                     android:layout_marginStart="50dp"
                     android:textAlignment="center"
-                    android:layout_marginTop="15dp"
-                    android:textStyle="bold"
-                    />
+                    android:textColor="@color/Blue" />
 
                 <TextView
                     android:id="@+id/CreateAccount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Help"
-                    android:textColor="#B30000"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/help"
                     android:textSize="20sp"
                     android:textAlignment="center"
-                    android:layout_marginTop="15dp"
-                    android:textStyle="bold"
-                    />
+                    android:textColor="@color/Blue" />
+
             </LinearLayout>
 
-
         </LinearLayout>
+
     </ScrollView>
 
 </RelativeLayout>
