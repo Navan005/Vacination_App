@@ -28,4 +28,5 @@
     <string name="create_an_account_button_label">Create An Account</string>
     <string name="already_have_an_account_log_in_label_text">Already have an account? Log In</string>
     <string name="parent_login_text_label">Parent Login</string>
+    <string name="create_account_label">Create Account</string>
 </resources>

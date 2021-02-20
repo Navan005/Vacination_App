@@ -25,6 +25,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
+                android:contentDescription="@string/logo_image_description"
                 app:srcCompat="@drawable/transparent_logo" />
 
             <TextView
@@ -36,8 +37,8 @@
                 android:layout_marginRight="50dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:text="Create Account"
-                android:textColor="@color/black"
+                android:text="@string/create_account_label"
+                android:textColor="@color/creme_white"
                 android:textSize="24sp" />
 
 
