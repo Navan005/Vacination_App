@@ -34,7 +34,7 @@
             android:fontFamily="sans-serif-light"
             android:gravity="center"
             android:text="@string/parent_login_text_label"
-            android:textColor="@color/text_Color"
+            android:textColor="@color/creme_white"
             android:textSize="21sp" />
 
         <TextView
@@ -45,7 +45,7 @@
             android:layout_marginRight="20dp"
             android:gravity="center"
             android:text="@string/enter_email_address_and_password_text"
-            android:textColor="@color/text_Color"
+            android:textColor="@color/creme_white"
             android:textSize="18sp" />
 
 
@@ -61,7 +61,7 @@
             android:inputType="textEmailAddress"
             android:hint="@string/email_address_text"
             android:textAlignment="center"
-            android:textColor="@color/text_Color"
+            android:textColor="@color/creme_white"
             android:textSize="17sp" />
 
         <EditText
@@ -76,7 +76,7 @@
             android:hint="@string/password_text"
             android:inputType="textPassword"
             android:textAlignment="center"
-            android:textColor="@color/text_Color"
+            android:textColor="@color/creme_white"
             android:textSize="17sp" />
 
         <Button
