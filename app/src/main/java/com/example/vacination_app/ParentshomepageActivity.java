@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -29,6 +30,7 @@ public class ParentshomepageActivity extends AppCompatActivity {
     private ChidrenAdapter adapter;
 
     private Button addChild;
+    private TextView profileb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class ParentshomepageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_parentshomepage);
 
         addChild=(Button) findViewById(R.id.addRecords);
+        profileb=(TextView) findViewById(R.id.profile);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String Total = user.getEmail();
@@ -76,6 +79,15 @@ public class ParentshomepageActivity extends AppCompatActivity {
 
                 Intent intent=new Intent(ParentshomepageActivity.this, AddchildActivity.class);
                 intent.putExtra("email", Total);
+                startActivity(intent);
+            }
+        });
+
+        profileb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(ParentshomepageActivity.this, ProfileditActivity.class);
                 startActivity(intent);
             }
         });
