@@ -64,5 +64,9 @@
     <string name="pending_appointments">Pending Appointments</string>
     <string name="appointment_history">Appointment History</string>
     <string name="logout">logout</string>
+    <string name="edit_child_information">Edit child information</string>
+    <string name="child_name">Child name</string>
+    <string name="confirm_details">confirm details</string>
+    <string name="delete_child">Delete Child</string>
 
 </resources>

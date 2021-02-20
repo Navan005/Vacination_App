@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DeletingchildActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical">
+    tools:context=".DeletingchildActivity"
+    android:layout_marginTop="50dp"
+    android:orientation="vertical">
 
 
 
@@ -23,7 +19,7 @@
             android:layout_marginRight="50dp"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
-            android:text="Edit child information"
+            android:text="@string/edit_child_information"
             android:textColor="@color/text_Color"
             android:textSize="30sp" />
 
@@ -41,7 +37,7 @@
             android:layout_marginRight="50dp"
             android:autofillHints="Email address"
             android:inputType="textEmailAddress"
-            android:hint="Child name"
+            android:hint="@string/child_name"
             android:textAlignment="center"
             android:textColor="@color/text_Color"
             android:textSize="17sp" />
@@ -57,7 +53,7 @@
             android:layout_marginRight="50dp"
             android:autofillHints="Email address"
             android:inputType="textEmailAddress"
-            android:hint="Age"
+            android:hint="@string/age"
             android:textAlignment="center"
             android:textColor="@color/text_Color"
             android:textSize="17sp" />
@@ -75,7 +71,7 @@
             android:layout_marginRight="100dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/round_button"
-            android:text="confirm details"
+            android:text="@string/confirm_details"
             android:textColor="@android:color/white"
             android:textSize="15sp" />
 
@@ -88,12 +84,8 @@
             android:layout_marginRight="100dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/round_button"
-            android:text="Delete Child"
+            android:text="@string/delete_child"
             android:textColor="@android:color/white"
             android:textSize="15sp" />
 
-
     </LinearLayout>
-
-
-</RelativeLayout>
