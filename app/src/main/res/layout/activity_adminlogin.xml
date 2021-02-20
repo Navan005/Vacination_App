@@ -32,15 +32,13 @@
                 android:id="@+id/immunized_label_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/logo_image"
-                android:layout_centerHorizontal="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:shadowColor="#000000"
+                android:layout_gravity="center"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="Employee Login"
-                android:textColor="@color/black"
+                android:text="@string/employee_login_label"
+                android:textColor="@color/creme_white"
                 android:textSize="24sp" />
 
             <TextView
