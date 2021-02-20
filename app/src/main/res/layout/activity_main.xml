@@ -27,7 +27,7 @@
         android:layout_marginRight="20dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/get_immunized_text"
-        android:textColor="@color/white"
+        android:textColor="@color/creme_white"
         android:textSize="24sp" />
 
     <TextView
@@ -40,7 +40,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
         android:text="@string/track_your_immunization_record_text"
-        android:textColor="@color/white"
+        android:textColor="@color/creme_white"
         android:fontFamily="sans-serif-light"
         android:textSize="24sp" />
 
@@ -70,6 +70,5 @@
         android:textColor="@color/Blue"
         android:textSize="18sp"
         android:textStyle="bold" />
-
 
 </RelativeLayout>
