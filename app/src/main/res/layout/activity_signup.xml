@@ -17,7 +17,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <ImageView
                 android:id="@+id/logo_image"
                 android:layout_width="300dp"
@@ -40,7 +39,6 @@
                 android:text="@string/create_account_label"
                 android:textColor="@color/creme_white"
                 android:textSize="24sp" />
-
 
             <EditText
                 android:id="@+id/etRegName"
@@ -112,7 +110,6 @@
                 android:hint="@string/confirm_password_label"
                 android:importantForAutofill="yes" />
 
-
             <CheckBox
                 android:id="@+id/terms_conditions"
                 android:layout_width="wrap_content"
@@ -133,11 +130,12 @@
                 android:layout_marginRight="100dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/round_button"
-                android:padding="17dp"
-                android:textColor="@color/white"
-                android:text="SIGN UP"
+                android:text="@string/sign_up_label"
+                android:textColor="@color/creme_white"
                 android:textSize="18sp" />
 
         </LinearLayout>
+
     </ScrollView>
+
 </RelativeLayout>
