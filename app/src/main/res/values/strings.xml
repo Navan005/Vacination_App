@@ -29,4 +29,6 @@
     <string name="already_have_an_account_log_in_label_text">Already have an account? Log In</string>
     <string name="parent_login_text_label">Parent Login</string>
     <string name="create_account_label">Create Account</string>
+    <string name="name_label">Name</string>
+    <string name="email_address_label">Email Address</string>
 </resources>
