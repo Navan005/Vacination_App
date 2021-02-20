@@ -105,7 +105,7 @@
                 android:layout_weight="1"
                 android:text="@string/forgot_password_label"
                 android:textAlignment="center"
-                android:textColor="@color/text_Color"
+                android:textColor="@color/Blue"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -116,7 +116,7 @@
                 android:layout_weight="1"
                 android:text="@string/create_an_account_text"
                 android:textAlignment="center"
-                android:textColor="@color/text_Color"
+                android:textColor="@color/Blue"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
