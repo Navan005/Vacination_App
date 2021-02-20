@@ -106,10 +106,11 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
                 android:textAlignment="center"
-                android:hint=" Confirm Password"
+                android:autofillHints="@string/confirm_password_label"
                 android:inputType="textPassword"
                 android:textSize="17sp"
-                android:autofillHints="" />
+                android:hint="@string/confirm_password_label"
+                android:importantForAutofill="yes" />
 
 
             <CheckBox

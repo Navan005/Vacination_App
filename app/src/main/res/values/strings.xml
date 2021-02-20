@@ -33,4 +33,5 @@
     <string name="email_address_label">Email Address</string>
     <string name="phone_label">Phone</string>
     <string name="password_label">Password</string>
+    <string name="confirm_password_label">Confirm Password</string>
 </resources>
