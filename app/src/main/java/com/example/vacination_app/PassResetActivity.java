@@ -1,8 +1,5 @@
 package com.example.vacination_app;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,10 +7,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
+// this activity is used to reset the password of account if user forget it
 public class PassResetActivity extends AppCompatActivity {
 
     private EditText edtEmail;
@@ -35,7 +36,7 @@ public class PassResetActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 String email = edtEmail.getText().toString().trim();
-
+//verify users has entered correct email
                 if (TextUtils.isEmpty(email)) {
                     Toast.makeText(getApplicationContext(), "Enter your email!", Toast.LENGTH_SHORT).show();
                     return;
