@@ -1,8 +1,5 @@
 package com.example.vacination_app;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -25,6 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+/*called whenever new  parent have to sign up */
 public class SignupActivity extends AppCompatActivity {
 
     private Button registerBtn;
@@ -38,7 +39,7 @@ public class SignupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
+        /* the below lines will find each specified ID tags as needed*/
         registerBtn = findViewById(R.id.btnRegLogin);
         mFullName   = findViewById(R.id.etRegName);
         mEmail      = findViewById(R.id.etRegGmail);
