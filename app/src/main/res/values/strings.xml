@@ -68,5 +68,6 @@
     <string name="child_name">Child name</string>
     <string name="confirm_details">confirm details</string>
     <string name="delete_child">Delete Child</string>
+    <string name="profile">Profile</string>
 
 </resources>
