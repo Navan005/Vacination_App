@@ -50,4 +50,7 @@
     <string name="add_a_child_label">Add a child</string>
     <string name="enter_details_of_your_child_label">Enter details of your child</string>
     <string name="date_of_birth">Date of birth</string>
+    <string name="gender_label">Gender</string>
+    <string name="male_label">Male</string>
+    <string name="female_label">Female</string>
 </resources>

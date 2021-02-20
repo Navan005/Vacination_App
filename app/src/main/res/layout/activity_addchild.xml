@@ -72,26 +72,26 @@
             android:autofillHints=""
             android:hint="@string/age"
             android:textAlignment="center"
-            android:textColor="@color/text_Color"
+            android:drawableStart="@drawable/age"
             android:inputType="numberDecimal"
             android:textSize="17sp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:gravity="center"
-            android:shadowColor="#000000"
-            android:text="Gender"
-            android:textColor="@color/text_Color"
+            android:text="@string/gender_label"
+            android:textColor="@color/creme_white"
             android:textSize="18sp" />
 
         <RadioGroup
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
             android:id="@+id/radioGroup">
@@ -99,16 +99,20 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/male_label"
                 android:id="@+id/male_radio"
-                android:text="Male"/>
+                android:textColor="@color/creme_white" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/fmale_radio"
-                android:layout_marginLeft="20dp"
-                android:text="Female"/>
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/female_label"
+                android:textColor="@color/creme_white" />
 
         </RadioGroup>
 
@@ -121,10 +125,9 @@
             android:layout_marginRight="100dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/round_button"
-            android:text="Add a child"
-            android:textColor="@android:color/white"
+            android:text="@string/add_a_child_label"
+            android:textColor="@color/creme_white"
             android:textSize="15sp" />
-
 
     </LinearLayout>
 
