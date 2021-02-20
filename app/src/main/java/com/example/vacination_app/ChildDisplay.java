@@ -1,5 +1,5 @@
 package com.example.vacination_app;
-
+//displays child information
 public class ChildDisplay {
 
     private String child_name;
@@ -11,6 +11,7 @@ public class ChildDisplay {
     }
 
     public ChildDisplay(String child_name,String age, String parent_name) {
+        //taking information and putting to strings to display
         this.age=age;
         this.child_name=child_name;
         this.parent_name=parent_name;
