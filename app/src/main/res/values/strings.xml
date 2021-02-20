@@ -34,4 +34,5 @@
     <string name="phone_label">Phone</string>
     <string name="password_label">Password</string>
     <string name="confirm_password_label">Confirm Password</string>
+    <string name="i_agree_to_term_and_conditions_checkbox">I agree to term and conditions</string>
 </resources>
