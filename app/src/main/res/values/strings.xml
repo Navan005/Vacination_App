@@ -31,4 +31,6 @@
     <string name="create_account_label">Create Account</string>
     <string name="name_label">Name</string>
     <string name="email_address_label">Email Address</string>
+    <string name="phone_label">Phone</string>
+    <string name="password_label">Password</string>
 </resources>

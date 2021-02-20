@@ -78,10 +78,11 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
                 android:textAlignment="center"
-                android:hint="Phone"
+                android:autofillHints="@string/phone_label"
                 android:inputType="phone"
                 android:textSize="17sp"
-                android:autofillHints="" />
+                android:hint="@string/phone_label"
+                android:importantForAutofill="yes" />
 
             <EditText
                 android:id="@+id/etRegPassword"
@@ -90,11 +91,12 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
-                android:hint="Password"
+                android:autofillHints="@string/password_label"
                 android:textAlignment="center"
                 android:inputType="textPassword"
                 android:textSize="17sp"
-                android:autofillHints="" />
+                android:hint="@string/password_label"
+                android:importantForAutofill="yes" />
 
             <EditText
                 android:id="@+id/etRegCPassword"
