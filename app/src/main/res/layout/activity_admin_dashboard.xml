@@ -15,7 +15,7 @@
         android:layout_marginRight="100dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/round_button"
-        android:text="Pending Appointments"
+        android:text="@string/pending_appointments"
         android:textColor="@android:color/white"
         android:textSize="15sp" />
 
@@ -29,7 +29,7 @@
         android:layout_marginRight="100dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/round_button"
-        android:text="Appointment History"
+        android:text="@string/appointment_history"
         android:textColor="@android:color/white"
         android:textSize="15sp" />
 
@@ -43,7 +43,7 @@
         android:layout_marginRight="100dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/round_button"
-        android:text="logout"
+        android:text="@string/logout"
         android:textColor="@android:color/white"
         android:textSize="15sp" />
 

@@ -74,19 +74,20 @@
 
     </LinearLayout>
 
-    <TextView
+    <Button
         android:id="@+id/delete_child"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_button"
+        android:textSize="15sp"
         android:layout_height="wrap_content"
         android:layout_below="@id/child_age_layout"
-        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:layout_marginRight="20dp"
-        android:fontFamily="sans-serif-light"
-        android:text="Edit child info"
-        android:textStyle="italic"
-        android:textAlignment="center"
-        android:textColor="#FFDD01" />
+        android:layout_marginEnd="20dp"
+        android:text="@string/edit_child_info"
+        android:textColor="@android:color/white"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/immunized_label_text"
@@ -97,7 +98,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:fontFamily="sans-serif-light"
-        android:text="Vaccines recommended"
+        android:text="@string/vaccines_recommended"
         android:textAlignment="center"
         android:textColor="@color/creme_white"
         android:textSize="24sp" />
