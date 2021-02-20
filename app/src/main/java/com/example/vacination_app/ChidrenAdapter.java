@@ -44,6 +44,7 @@ public class ChidrenAdapter  extends RecyclerView.Adapter<ChidrenAdapter.ViewHol
                 Intent intent = new Intent(mContext,child_vaccineList.class);
 
                 // passing data to the Product activity.
+                intent.putExtra("id", listData.get(position).getId());
                 intent.putExtra("Name",listData.get(position).getChild_name());
                 intent.putExtra("Age",listData.get(position).getAge());
                 intent.putExtra("parentName",listData.get(position).getParent_name());

@@ -55,6 +55,7 @@ public class ParentshomepageActivity extends AppCompatActivity {
                 if (dataSnapshot.exists()){
                     for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                         ChildDisplay l=npsnapshot.getValue(ChildDisplay.class);
+                        l.setId(npsnapshot.getKey());
                         listData.add(l);
                     }
                     adapter=new ChidrenAdapter(ParentshomepageActivity.this,listData);

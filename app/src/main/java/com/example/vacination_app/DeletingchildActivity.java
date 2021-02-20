@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
@@ -16,6 +17,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class DeletingchildActivity extends AppCompatActivity {
 
@@ -30,10 +34,11 @@ public class DeletingchildActivity extends AppCompatActivity {
         childName=findViewById(R.id.childNametxt);
         childAge=findViewById(R.id.childAgetxt);
 
-        //editInfo=findViewById(R.id.btn_editInformation);
+        editInfo=findViewById(R.id.btn_editInformation);
         deleteInfo=findViewById(R.id.btn_deleteChild);
 
         Intent intent = getIntent();
+        String childId = intent.getStringExtra("id");
         String Title = intent.getExtras().getString("name");
         String Description = intent.getExtras().getString("age");
         String parentName = intent.getExtras().getString("parentName");
@@ -67,15 +72,39 @@ public class DeletingchildActivity extends AppCompatActivity {
                 });
 
 
-
-
                 Toast.makeText(DeletingchildActivity.this, "Child deleted.", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DeletingchildActivity.this, ParentshomepageActivity.class);
                 startActivity(intent);
             }
         });
 
+        editInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+
+
+                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Children").child(childId);
+
+                Map<String, Object> data = new HashMap<>();
+                data.put("child_name", childName.getText().toString());
+                data.put("age", childAge.getText().toString());
+
+                databaseReference.updateChildren(data, new DatabaseReference.CompletionListener() {
+                    @Override
+                    public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
+                        if(error == null){
+                            Toast.makeText(getApplicationContext(), "Child information updated.", Toast.LENGTH_LONG).show();
+                            Intent intent=new Intent(DeletingchildActivity.this, ParentshomepageActivity.class);
+                            startActivity(intent);
+                        }
+                    }
+                });
+                //Intent intent = new Intent(ConfirmAppointmentActivity.this, ParentshomepageActivity.class);
+                //startActivity(intent);
+
+            }
+        });
 
 
     }

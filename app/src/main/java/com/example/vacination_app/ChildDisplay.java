@@ -5,6 +5,7 @@ public class ChildDisplay {
     private String child_name;
     private String age;
     private String parent_name;
+    private String id;
 
     public ChildDisplay() {
 
@@ -16,6 +17,14 @@ public class ChildDisplay {
         this.child_name=child_name;
         this.parent_name=parent_name;
     }
+
+    public String getId() {
+        return id;
+    }
+    public void setId(String id){
+        this.id = id;
+    }
+
 
     public String getChild_name() {
         return child_name;

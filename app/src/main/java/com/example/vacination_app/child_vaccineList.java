@@ -38,6 +38,7 @@ public class child_vaccineList extends AppCompatActivity {
         deleteChild=findViewById(R.id.delete_child);
 
         Intent intent = getIntent();
+        String childId = intent.getStringExtra("id");
         String Title = intent.getExtras().getString("Name");
         String Description = intent.getExtras().getString("Age");
         String parentName = intent.getExtras().getString("parentName");
@@ -81,6 +82,7 @@ public class child_vaccineList extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(child_vaccineList.this, DeletingchildActivity.class);
+                intent.putExtra("id", childId);
                 intent.putExtra("name", Title);
                 intent.putExtra("age", Description);
                 intent.putExtra("parentname", parentName);
