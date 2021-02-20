@@ -54,7 +54,7 @@ public class ProfileditActivity extends AppCompatActivity {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
              if(documentSnapshot.exists()){
-                 String named=documentSnapshot.getString("fName");
+                 String named=documentSnapshot.getString("fname");
                  String emaild=documentSnapshot.getString("email");
                  String phoned=documentSnapshot.getString("phone");
 
