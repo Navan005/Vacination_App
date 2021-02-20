@@ -85,7 +85,7 @@ public class ProfileditActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Intent intent=new Intent(ProfileditActivity.this, ParentshomepageActivity.class);
-                        Toast.makeText(ProfileditActivity.this, "Child info updated", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ProfileditActivity.this, "Profile updated", Toast.LENGTH_SHORT).show();
                         startActivity(intent);
                     }
                 });
