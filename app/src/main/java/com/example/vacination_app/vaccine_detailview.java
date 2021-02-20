@@ -18,7 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class vaccine_detailview extends AppCompatActivity {
 
     TextView vaccineName, vaccineAge, vaccineDescription;
-    Button appointmentBtn,historyAppBtn;
+    Button appointmentBtn,historyAppBtn,logout,homeBt;
     FirebaseFirestore db;
     DatabaseReference appointments;
     AddingAppointment member;
@@ -33,6 +33,8 @@ public class vaccine_detailview extends AppCompatActivity {
         vaccineDescription=findViewById(R.id.vaccine_description);
         appointmentBtn=findViewById(R.id.appointment_button);
         historyAppBtn=findViewById(R.id.appointmentHistory_button);
+        logout=findViewById(R.id.logoutBtn);
+        homeBt=findViewById(R.id.homeBtn);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userid = user.getEmail();
@@ -78,7 +80,22 @@ public class vaccine_detailview extends AppCompatActivity {
             }
         });
 
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(vaccine_detailview.this, MainActivity.class);
+                Toast.makeText(vaccine_detailview.this, "Account logged out", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
 
+        homeBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(vaccine_detailview.this, ParentshomepageActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }

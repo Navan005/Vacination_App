@@ -88,6 +88,39 @@
         android:text="Appointment History"
         android:textColor="@color/white" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="170dp">
+
+        <Button
+            android:id="@+id/homeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/round_button"
+            android:text="Home"
+            android:layout_marginLeft="70dp"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/round_button"
+        android:text="@string/logout"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/appointment_button"
         android:layout_width="match_parent"
