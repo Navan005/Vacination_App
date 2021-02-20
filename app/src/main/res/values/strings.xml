@@ -40,4 +40,5 @@
     <string name="please_enter_your_email_address_and_password_label">Please enter your email address and password</string>
     <string name="name">Name</string>
     <string name="age">Age</string>
+    <string name="child_name_text">Child Name</string>
 </resources>
