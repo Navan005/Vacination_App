@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".child_vaccineList">
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="@string/child_information_label"
-        android:textColor="@color/text_Color"
+        android:textColor="@color/creme_white"
         android:textSize="25sp" />
 
     <LinearLayout
@@ -29,6 +30,7 @@
         <TextView
             android:id="@+id/child_name_label"
             android:layout_width="wrap_content"
+            android:textColor="@color/creme_white"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/child_name_label_text" />
@@ -36,6 +38,7 @@
         <TextView
             android:id="@+id/child_name"
             android:layout_weight="1"
+            android:textColor="@color/creme_white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/child1" />
@@ -56,12 +59,14 @@
         <TextView
             android:id="@+id/child_age_label"
             android:layout_width="wrap_content"
+            android:textColor="@color/creme_white"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/child_age_label_text" />
 
         <TextView
             android:id="@+id/child_age"
+            android:textColor="@color/creme_white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -77,25 +82,23 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
-        android:fontFamily="sans-serif-condensed-medium"
+        android:fontFamily="sans-serif-light"
         android:text="Delete Child"
         android:textAlignment="center"
-        android:textColor="#0138FF"
-        />
+        android:textColor="@color/creme_white" />
 
     <TextView
         android:id="@+id/immunized_label_text"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/delete_child"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:shadowColor="#000000"
+        android:fontFamily="sans-serif-light"
         android:text="Vaccines recommended"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/creme_white"
         android:textSize="24sp" />
 
     <androidx.recyclerview.widget.RecyclerView
