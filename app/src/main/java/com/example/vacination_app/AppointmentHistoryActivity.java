@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
-
+//displays history of appointments
 public class AppointmentHistoryActivity extends AppCompatActivity {
 
     private List<AppointmentDisplay> listData;

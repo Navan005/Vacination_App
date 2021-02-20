@@ -15,7 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-
+//login for admin
 public class AdminloginActivity extends AppCompatActivity {
 
     Button Login_button;
@@ -37,7 +37,7 @@ public class AdminloginActivity extends AppCompatActivity {
         Login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+//verifying email and password
                 if(email.getText().toString().equals("")){
                     Toast.makeText(AdminloginActivity.this, "Please enter valid email", Toast.LENGTH_SHORT).show();
                 }else if(password.getText().toString().equals("")){
@@ -58,6 +58,7 @@ public class AdminloginActivity extends AppCompatActivity {
                                         if(a.equalsIgnoreCase(a1) & b.equalsIgnoreCase(b1)) {
                                             Intent home = new Intent(AdminloginActivity.this, Admin_dashboard.class);
                                             startActivity(home);
+                                            //display message about successfull login or not
                                             Toast.makeText(AdminloginActivity.this, "Logged In", Toast.LENGTH_SHORT).show();
                                             break;
                                         }else
