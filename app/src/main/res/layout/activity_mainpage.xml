@@ -59,6 +59,7 @@
                     android:text="@string/plus"
                     android:textColor="@color/creme_white"
                     android:textSize="18sp" />
+
             </LinearLayout>
 
             <LinearLayout
