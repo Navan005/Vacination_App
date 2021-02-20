@@ -27,7 +27,7 @@
         android:layout_marginRight="20dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/get_immunized_text"
-        android:textColor="@color/text_Color"
+        android:textColor="@color/white"
         android:textSize="24sp" />
 
     <TextView
@@ -40,7 +40,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
         android:text="@string/track_your_immunization_record_text"
-        android:textColor="@color/text_Color"
+        android:textColor="@color/white"
         android:fontFamily="sans-serif-light"
         android:textSize="24sp" />
 
@@ -54,7 +54,7 @@
         android:layout_marginBottom="15dp"
         android:background="@drawable/round_button"
         android:text="@string/create_an_account_button_label"
-        android:textColor="@color/text_Color"
+        android:textColor="@color/white"
         android:textSize="18sp" />
 
     <TextView
@@ -67,7 +67,7 @@
         android:layout_marginBottom="50dp"
         android:gravity="center"
         android:text="@string/already_have_an_account_log_in_label_text"
-        android:textColor="@color/text_Color"
+        android:textColor="@color/Blue"
         android:textSize="18sp"
         android:textStyle="bold" />
 
