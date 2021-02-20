@@ -40,7 +40,7 @@ public class Admin_dashboard extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Admin_dashboard.this, AdminloginActivity.class);
+                Intent intent = new Intent(Admin_dashboard.this, MainActivity.class);
                 Toast.makeText(Admin_dashboard.this, "Account logged out", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
