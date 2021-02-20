@@ -17,7 +17,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <ImageView
                 android:id="@+id/logo_image"
                 android:layout_width="300dp"
@@ -25,6 +24,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
+                android:contentDescription="@string/logo_image_description"
                 app:srcCompat="@drawable/transparent_logo" />
 
             <TextView
@@ -36,10 +36,9 @@
                 android:layout_marginRight="50dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:text="Create Account"
-                android:textColor="@color/black"
+                android:text="@string/create_account_label"
+                android:textColor="@color/creme_white"
                 android:textSize="24sp" />
-
 
             <EditText
                 android:id="@+id/etRegName"
@@ -48,9 +47,11 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="50dp"
-                android:hint="Name"
+                android:autofillHints="@string/name_label"
                 android:textAlignment="center"
                 android:inputType="text"
+                android:hint="@string/name_label"
+                android:importantForAutofill="yes"
                 android:textSize="17sp" />
 
             <EditText
@@ -60,11 +61,12 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
-                android:hint="Email Address"
+                android:autofillHints="@string/email_address_label"
                 android:textAlignment="center"
+                android:hint="@string/email_address_label"
                 android:inputType="textEmailAddress"
                 android:textSize="17sp"
-                android:autofillHints="" />
+                android:importantForAutofill="yes" />
 
             <EditText
                 android:id="@+id/etRegPhone"
@@ -74,10 +76,11 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
                 android:textAlignment="center"
-                android:hint="Phone"
+                android:autofillHints="@string/phone_label"
                 android:inputType="phone"
                 android:textSize="17sp"
-                android:autofillHints="" />
+                android:hint="@string/phone_label"
+                android:importantForAutofill="yes" />
 
             <EditText
                 android:id="@+id/etRegPassword"
@@ -86,11 +89,12 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
-                android:hint="Password"
+                android:autofillHints="@string/password_label"
                 android:textAlignment="center"
                 android:inputType="textPassword"
                 android:textSize="17sp"
-                android:autofillHints="" />
+                android:hint="@string/password_label"
+                android:importantForAutofill="yes" />
 
             <EditText
                 android:id="@+id/etRegCPassword"
@@ -100,19 +104,19 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
                 android:textAlignment="center"
-                android:hint=" Confirm Password"
+                android:autofillHints="@string/confirm_password_label"
                 android:inputType="textPassword"
                 android:textSize="17sp"
-                android:autofillHints="" />
-
+                android:hint="@string/confirm_password_label"
+                android:importantForAutofill="yes" />
 
             <CheckBox
                 android:id="@+id/terms_conditions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="I agree to term and conditions"
+                android:text="@string/i_agree_to_term_and_conditions_checkbox"
                 android:layout_marginStart="15dp"
-                android:textColor="@color/black"
+                android:textColor="@color/Blue"
                 android:textSize="16sp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="sans-serif-light"
@@ -126,11 +130,12 @@
                 android:layout_marginRight="100dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/round_button"
-                android:padding="17dp"
-                android:textColor="@color/white"
-                android:text="SIGN UP"
+                android:text="@string/sign_up_label"
+                android:textColor="@color/creme_white"
                 android:textSize="18sp" />
 
         </LinearLayout>
+
     </ScrollView>
+
 </RelativeLayout>
