@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".vaccine_detailview">
 
     <TextView
@@ -10,11 +11,11 @@
         android:id="@+id/vaccine_name"
         android:layout_marginTop="30dp"
         android:layout_height="wrap_content"
-        android:text="Vaccine Label"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_marginStart="10dp"
-        />
+        android:gravity="center"
+        android:text="@string/vaccine_label"
+        android:textSize="25sp"
+        android:textColor="@color/creme_white" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,26 +23,27 @@
         android:orientation="horizontal"
         android:layout_below="@id/vaccine_name"
         android:id="@+id/vaccine_age_layout"
-        android:layout_marginStart="10dp"
-        >
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:id="@+id/vaccine_age_label"
             android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
-            android:text="Recommended Age:"
-            android:textStyle="bold"
+            android:text="@string/recommended_age"
+            android:textColor="@color/creme_white"
             android:textSize="18sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:id="@+id/vaccine_age"
-        android:layout_marginTop="10dp"
-        android:layout_height="wrap_content"
-        android:text="Vaccine Label"
-        android:layout_marginStart="30dp"
-        android:textSize="18sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/vaccine_age"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:text="@string/vaccine_age"
+            android:textColor="@color/creme_white"
+            android:layout_marginStart="30dp"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -54,10 +56,10 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
-        android:gravity="center_vertical"
-        android:text="Description:"
-        android:textSize="18dp"
-        android:textStyle="bold" />
+        android:gravity="center"
+        android:text="@string/description_label"
+        android:textColor="@color/creme_white"
+        android:textSize="18sp" />
 
 
     <TextView
@@ -69,9 +71,10 @@
         android:layout_centerVertical="true"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        android:text="@string/Vaccine_discription"
         android:gravity="center_vertical"
-        android:text="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
-        android:textSize="18dp" />
+        android:textColor="@color/creme_white"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/appointment_button"
@@ -82,6 +85,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="25dp"
         android:background="@drawable/round_button"
-        android:text="Book Appointment"
+        android:text="@string/book_appointment"
         android:textColor="@color/white" />
+
 </RelativeLayout>
