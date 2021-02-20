@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//displays  list of vaccines
 public class child_vaccineList extends AppCompatActivity {
 
     TextView childName, childAge, deleteChild;
