@@ -36,4 +36,6 @@
     <string name="confirm_password_label">Confirm Password</string>
     <string name="i_agree_to_term_and_conditions_checkbox">I agree to term and conditions</string>
     <string name="sign_up_label">SIGN UP</string>
+    <string name="employee_login_label">Employee Login</string>
+    <string name="please_enter_your_email_address_and_password_label">Please enter your email address and password.</string>
 </resources>
