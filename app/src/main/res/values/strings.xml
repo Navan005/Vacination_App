@@ -61,4 +61,8 @@
     <string name="book_appointment">Book Appointment</string>
     <string name="edit_child_info">Edit child info</string>
     <string name="vaccines_recommended">Vaccines recommended</string>
+    <string name="pending_appointments">Pending Appointments</string>
+    <string name="appointment_history">Appointment History</string>
+    <string name="logout">logout</string>
+
 </resources>

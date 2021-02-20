@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AppointmentHistoryActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AppointmentHistoryActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    android:orientation="vertical">
 
 
         <TextView
             android:id="@+id/immunized_label_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/logo_image"
-            android:layout_centerHorizontal="true"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="20dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:shadowColor="#000000"
-            android:text="Appointment History"
+            android:text="@string/appointment_history"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="24sp" />
@@ -36,6 +30,4 @@
         </androidx.recyclerview.widget.RecyclerView>
 
 
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>
