@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+//this directs CLSC to check pending and history of appointments
 public class Admin_dashboard extends AppCompatActivity {
 
     Button pendingAppointment, appointmentHistory;
@@ -15,7 +15,7 @@ public class Admin_dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_dashboard);
-
+//find id with specific tags as needed
         pendingAppointment = (Button) findViewById(R.id.pendingAppointmentBtn);
         appointmentHistory = (Button) findViewById(R.id.appointmentHistoryBtn);
 
