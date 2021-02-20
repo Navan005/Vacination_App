@@ -1,5 +1,5 @@
 package com.example.vacination_app;
-
+//adding new child to parents account
 public class AddingChild {
     private String child_name;
     private String age;
