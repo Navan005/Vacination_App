@@ -18,7 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class vaccine_detailview extends AppCompatActivity {
 
     TextView vaccineName, vaccineAge, vaccineDescription;
-    Button appointmentBtn;
+    Button appointmentBtn,historyAppBtn;
     FirebaseFirestore db;
     DatabaseReference appointments;
     AddingAppointment member;
@@ -32,6 +32,8 @@ public class vaccine_detailview extends AppCompatActivity {
         vaccineAge=findViewById(R.id.vaccine_age);
         vaccineDescription=findViewById(R.id.vaccine_description);
         appointmentBtn=findViewById(R.id.appointment_button);
+        historyAppBtn=findViewById(R.id.appointmentHistory_button);
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userid = user.getEmail();
 
@@ -65,6 +67,14 @@ public class vaccine_detailview extends AppCompatActivity {
                 //Intent intent=new Intent(vaccine_detailview.this, ParentshomepageActivity.class);
                 //intent.putExtra("email", Total);
                 //startActivity(intent);
+            }
+        });
+
+        historyAppBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(vaccine_detailview.this, ParentHistoryActivity.class);
+                startActivity(intent);
             }
         });
 

@@ -97,6 +97,8 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
                         if(error == null){
                             Toast.makeText(getApplicationContext(), "Appointment booked successfullly", Toast.LENGTH_LONG).show();
+                            Intent intent=new Intent(ConfirmAppointmentActivity.this, Admin_dashboard.class);
+                            startActivity(intent);
                         }
                     }
                 });

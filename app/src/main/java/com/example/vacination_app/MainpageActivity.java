@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -34,8 +36,9 @@ public class MainpageActivity extends AppCompatActivity {
         addChild2=(Button) findViewById(R.id.addRecords2);
         tryy=findViewById(R.id.immunized_label_text);
 
-
-        String Total=getIntent().getStringExtra("email");
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String Total = user.getEmail();
+        //String Total=getIntent().getStringExtra("email");
 
 
         addChild.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +54,7 @@ public class MainpageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MainpageActivity.this, AddchildActivity.class);
+                intent.putExtra("email", Total);
                 startActivity(intent);
             }
         });

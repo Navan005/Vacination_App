@@ -62,7 +62,6 @@
                 android:drawableStart="@drawable/email"
                 android:hint="@string/email_address_label"
                 android:inputType="textEmailAddress"
-                android:text="@string/email_address_label"
                 android:textAlignment="center"
                 android:importantForAutofill="yes"
                 android:textSize="17sp" />

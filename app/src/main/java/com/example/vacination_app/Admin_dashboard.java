@@ -4,12 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 //this directs CLSC to check pending and history of appointments
 public class Admin_dashboard extends AppCompatActivity {
 
-    Button pendingAppointment, appointmentHistory;
+    Button pendingAppointment, appointmentHistory,logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class Admin_dashboard extends AppCompatActivity {
 //find id with specific tags as needed
         pendingAppointment = (Button) findViewById(R.id.pendingAppointmentBtn);
         appointmentHistory = (Button) findViewById(R.id.appointmentHistoryBtn);
+        logout = (Button) findViewById(R.id.logoutBtn);
 
         pendingAppointment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,6 +33,15 @@ public class Admin_dashboard extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Admin_dashboard.this, AppointmentHistoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Admin_dashboard.this, AdminloginActivity.class);
+                Toast.makeText(Admin_dashboard.this, "Account logged out", Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });

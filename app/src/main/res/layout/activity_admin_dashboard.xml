@@ -33,5 +33,19 @@
         android:textColor="@android:color/white"
         android:textSize="15sp" />
 
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@id/appointmentHistoryBtn"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_button"
+        android:text="logout"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
 
 </RelativeLayout>

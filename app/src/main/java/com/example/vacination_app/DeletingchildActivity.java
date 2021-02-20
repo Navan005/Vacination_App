@@ -30,7 +30,7 @@ public class DeletingchildActivity extends AppCompatActivity {
         childName=findViewById(R.id.childNametxt);
         childAge=findViewById(R.id.childAgetxt);
 
-        editInfo=findViewById(R.id.btn_editInformation);
+        //editInfo=findViewById(R.id.btn_editInformation);
         deleteInfo=findViewById(R.id.btn_deleteChild);
 
         Intent intent = getIntent();
