@@ -44,14 +44,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/logo_image"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="20dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:shadowColor="#000000"
-                android:text="Please enter your email address and password."
-                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"
+                android:text="@string/please_enter_your_email_address_and_password_label"
+                android:textColor="@color/creme_white"
                 android:textSize="18sp" />
 
             <EditText
