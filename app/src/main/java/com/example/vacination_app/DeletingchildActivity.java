@@ -1,14 +1,14 @@
 package com.example.vacination_app;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -46,7 +46,7 @@ public class DeletingchildActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String childnamee = childName.getText().toString();
-
+//checking childname from the database to remove from it
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Children");
                 Query query=databaseReference.orderByChild("child_name").equalTo(childnamee);
                 query.addListenerForSingleValueEvent(new ValueEventListener() {
