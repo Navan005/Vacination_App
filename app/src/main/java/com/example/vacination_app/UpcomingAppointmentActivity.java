@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class cancelledAppointmentActivity extends AppCompatActivity {
+public class UpcomingAppointmentActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cancelled_appointment);
+        setContentView(R.layout.activity_upcoming_appointment);
     }
 }

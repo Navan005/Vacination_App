@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".cancelledAppointmentActivity"></activity>
+        <activity android:name=".UpcomingAppointmentActivity"></activity>
         <activity android:name=".ParentCancelAppointmentActivity" />
         <activity android:name=".ProfileditActivity" />
         <activity android:name=".ParentHistoryActivity" />

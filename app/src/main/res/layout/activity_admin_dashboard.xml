@@ -44,21 +44,7 @@
         android:layout_marginRight="100dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/round_button"
-        android:text="@string/appointment_history"
-        android:textColor="@android:color/white"
-        android:textSize="15sp" />
-
-    <Button
-        android:id="@+id/cancelledAppointments"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="50dp"
-        android:layout_below="@id/upcomingAppointments"
-        android:layout_marginRight="100dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/round_button"
-        android:text="@string/appointment_history"
+        android:text="Upcoming Appointments"
         android:textColor="@android:color/white"
         android:textSize="15sp" />
 
@@ -67,7 +53,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:layout_below="@id/cancelledAppointments"
+        android:layout_below="@id/upcomingAppointments"
         android:layout_marginTop="50dp"
         android:layout_marginRight="100dp"
         android:layout_marginBottom="10dp"
