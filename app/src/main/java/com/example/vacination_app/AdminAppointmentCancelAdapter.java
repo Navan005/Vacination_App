@@ -41,7 +41,7 @@ public class AdminAppointmentCancelAdapter extends RecyclerView.Adapter<AdminApp
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(mContext,ParentCancelAppointmentActivity.class);
+                Intent intent = new Intent(mContext,AdminCancelAppointmentActivity.class);
 
                 // passing data to the Product activity.
                 intent.putExtra("id", listData.get(position).getId());
