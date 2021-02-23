@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ public class SignupActivity extends AppCompatActivity {
     private Button registerBtn;
     public static final String TAG = "TAG";
     EditText mFullName,mEmail,mPassword,mCPassword,mPhone;
+    CheckBox terms;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userID;
@@ -46,6 +48,7 @@ public class SignupActivity extends AppCompatActivity {
         mPassword   = findViewById(R.id.etRegPassword);
         mCPassword  = findViewById(R.id.etRegCPassword);
         mPhone      = findViewById(R.id.etRegPhone);
+        terms       =findViewById(R.id.terms_conditions);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -76,6 +79,11 @@ public class SignupActivity extends AppCompatActivity {
                     return;
                 }
 
+                if (phone.length() !=10) {
+                    mPhone.setError("Enter a valid phone number");
+                    return;
+                }
+
                 if (TextUtils.isEmpty(password)) {
                     mPassword.setError("Name is Required.");
                     return;
@@ -93,6 +101,11 @@ public class SignupActivity extends AppCompatActivity {
 
                 if (password.length() < 6) {
                     mPassword.setError("Password Must be >= 6 Characters");
+                    return;
+                }
+
+                if(terms.isChecked()==false){
+                    Toast.makeText(SignupActivity.this, "Agree to terms and conditions.", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
