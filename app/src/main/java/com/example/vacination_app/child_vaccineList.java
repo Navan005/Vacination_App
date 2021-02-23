@@ -55,7 +55,7 @@ public class child_vaccineList extends AppCompatActivity {
 
 
         final DatabaseReference nm= FirebaseDatabase.getInstance().getReference("Vaccines");
-        Query query = nm.orderByChild("recommendedAge").equalTo(Description);
+        Query query = nm.orderByChild("recommendedAge").endAt(Description);
         query.addListenerForSingleValueEvent(new ValueEventListener() {
 
             @Override
