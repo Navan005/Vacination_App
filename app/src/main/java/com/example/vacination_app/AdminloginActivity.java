@@ -2,6 +2,7 @@ package com.example.vacination_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,10 +39,17 @@ public class AdminloginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //verifying email and password
-                if(email.getText().toString().equals("")){
-                    Toast.makeText(AdminloginActivity.this, "Please enter valid email", Toast.LENGTH_SHORT).show();
-                }else if(password.getText().toString().equals("")){
-                    Toast.makeText(AdminloginActivity.this, "Please enter valid password", Toast.LENGTH_SHORT).show();
+                String emailll=email.getText().toString().trim();
+                String passworddd=password.getText().toString().trim();
+
+                if(TextUtils.isEmpty(emailll)){
+                    email.setError("Email is Required.");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(passworddd)){
+                    password.setError("Password is Required.");
+                    return;
                 }
 
                 db.collection("admin")
