@@ -2,6 +2,7 @@ package com.example.vacination_app;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -82,7 +83,29 @@ public class DeletingchildActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                String fullName = childName.getText().toString();
+                String child_age = childAge.getText().toString();
+                int agee=Integer.parseInt(child_age);
 
+                if (TextUtils.isEmpty(fullName)) {
+                    childName.setError("Child Name is Required.");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(child_age)) {
+                    childAge.setError("Child age is Required.");
+                    return;
+                }
+
+                if (agee<1) {
+                    childAge.setError("Enter valid age");
+                    return;
+                }
+
+                if (agee>12) {
+                    childAge.setError("Vaccination is provided only till age 12");
+                    return;
+                }
 
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Children").child(childId);
 
