@@ -73,7 +73,7 @@
             android:hint="@string/age"
             android:textAlignment="center"
             android:drawableStart="@drawable/age"
-            android:inputType="numberDecimal"
+            android:inputType="number"
             android:textSize="17sp" />
 
         <TextView

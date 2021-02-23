@@ -85,7 +85,7 @@ public class DeletingchildActivity extends AppCompatActivity {
 
                 String fullName = childName.getText().toString();
                 String child_age = childAge.getText().toString();
-                int agee=Integer.parseInt(child_age);
+
 
                 if (TextUtils.isEmpty(fullName)) {
                     childName.setError("Child Name is Required.");
@@ -96,17 +96,18 @@ public class DeletingchildActivity extends AppCompatActivity {
                     childAge.setError("Child age is Required.");
                     return;
                 }
+                else {
+                    int agee=Integer.parseInt(child_age);
+                    if (agee < 1) {
+                        childAge.setError("Enter valid age");
+                        return;
+                    }
 
-                if (agee<1) {
-                    childAge.setError("Enter valid age");
-                    return;
+                    if (agee > 12) {
+                        childAge.setError("Vaccination is provided only till age 12");
+                        return;
+                    }
                 }
-
-                if (agee>12) {
-                    childAge.setError("Vaccination is provided only till age 12");
-                    return;
-                }
-
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Children").child(childId);
 
                 Map<String, Object> data = new HashMap<>();
