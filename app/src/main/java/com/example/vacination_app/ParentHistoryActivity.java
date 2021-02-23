@@ -25,7 +25,7 @@ public class ParentHistoryActivity extends AppCompatActivity {
 
     private List<AppointmentDisplay> listData;
     private RecyclerView rv;
-    private AppointmentHistoryAdapter adapter;
+    private AppointmentCancelAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +53,10 @@ public class ParentHistoryActivity extends AppCompatActivity {
                 if (dataSnapshot.exists()){
                     for (DataSnapshot npsnapshot : dataSnapshot.getChildren()){
                         AppointmentDisplay l=npsnapshot.getValue(AppointmentDisplay.class);
+                        l.setId(npsnapshot.getKey());
                         listData.add(l);
                     }
-                    adapter=new AppointmentHistoryAdapter(ParentHistoryActivity.this,listData);
+                    adapter=new AppointmentCancelAdapter(ParentHistoryActivity.this,listData);
                     rv.setAdapter(adapter);
 
                 }
