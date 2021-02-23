@@ -38,6 +38,14 @@ public class Admin_dashboard extends AppCompatActivity {
             }
         });
 
+        upcomingApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Admin_dashboard.this, UpcomingAppointmentActivity.class);
+                startActivity(intent);
+            }
+        });
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
