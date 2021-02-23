@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 //this directs CLSC to check pending and history of appointments
 public class Admin_dashboard extends AppCompatActivity {
 
-    Button pendingAppointment, appointmentHistory,logout;
+    Button pendingAppointment, appointmentHistory, cancelledApp, upcomingApp ,logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,8 @@ public class Admin_dashboard extends AppCompatActivity {
 //find id with specific tags as needed
         pendingAppointment = (Button) findViewById(R.id.pendingAppointmentBtn);
         appointmentHistory = (Button) findViewById(R.id.appointmentHistoryBtn);
+        cancelledApp = (Button) findViewById(R.id.cancelledAppointments);
+        upcomingApp = (Button) findViewById(R.id.upcomingAppointments);
         logout = (Button) findViewById(R.id.logoutBtn);
 
         pendingAppointment.setOnClickListener(new View.OnClickListener() {
