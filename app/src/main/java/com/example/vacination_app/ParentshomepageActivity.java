@@ -128,21 +128,16 @@ public class ParentshomepageActivity extends AppCompatActivity implements Naviga
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {  // if any item is clicked in nav
         switch (item.getItemId()) {
             case R.id.nav_message:
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.container_fragment, new messageFragment())
-                        .commit();
+                Intent intent=new Intent(ParentshomepageActivity.this, ProfileditActivity.class);
+                startActivity(intent);
                 break;
             case R.id.nav_chat:
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.container_fragment, new chatFragment())
-                        .commit();
-
+                Intent intent1=new Intent(ParentshomepageActivity.this, ParentHistoryActivity.class);
+                startActivity(intent1);
                 break;
             case R.id.nav_profile:
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.container_fragment, new profileFragment())
-                        .commit();
-
+                Intent intent2=new Intent(ParentshomepageActivity.this, MainActivity.class);
+                startActivity(intent2);
                 break;
             case R.id.nav_send:
                 Toast.makeText(this, "you clicked send option", Toast.LENGTH_SHORT).show();
