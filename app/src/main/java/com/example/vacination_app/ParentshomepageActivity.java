@@ -139,13 +139,6 @@ public class ParentshomepageActivity extends AppCompatActivity implements Naviga
                 Intent intent2=new Intent(ParentshomepageActivity.this, MainActivity.class);
                 startActivity(intent2);
                 break;
-            case R.id.nav_send:
-                Toast.makeText(this, "you clicked send option", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_share:
-                Toast.makeText(this, "you clicked share option", Toast.LENGTH_SHORT).show();
-
-                break;
         }
         mNavDrawer.closeDrawer(GravityCompat.START); //nav in left side
         return true;

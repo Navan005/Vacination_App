@@ -71,5 +71,7 @@
     <string name="confirm_details">confirm details</string>
     <string name="delete_child">Delete Child</string>
     <string name="profile">Profile</string>
+    <string name="get_immunized">Get Immunized</string>
+    <string name="vaccine_it">Vaccine It</string>
 
 </resources>
