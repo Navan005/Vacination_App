@@ -40,7 +40,7 @@ public class ParentshomepageActivity extends AppCompatActivity implements Naviga
     private ChidrenAdapter adapter;
 
     private Button addChild;
-    private TextView profileb;
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();  //to create inflater for menu
@@ -53,7 +53,7 @@ public class ParentshomepageActivity extends AppCompatActivity implements Naviga
         setContentView(R.layout.nav_drawer_layout);
 
         addChild=(Button) findViewById(R.id.addRecords);
-        profileb=(TextView) findViewById(R.id.profile);
+
         Toolbar toolbar = findViewById(R.id.toolbar);  //reference to toolbar because i removed default one
         // setSupportActionBar(toolbar);  // call method and pass the toolbar
         mNavDrawer = findViewById(R.id.drawer_layout);  // we assign var
@@ -112,14 +112,7 @@ public class ParentshomepageActivity extends AppCompatActivity implements Naviga
             }
         });
 
-        profileb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent intent=new Intent(ParentshomepageActivity.this, ProfileditActivity.class);
-                startActivity(intent);
-            }
-        });
 
 
     }

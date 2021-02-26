@@ -25,7 +25,7 @@ public class MainpageActivity extends AppCompatActivity {
 
 
     private Button addChild,addChild2;
-    private TextView tryy;
+    private TextView profileb,logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,9 @@ public class MainpageActivity extends AppCompatActivity {
 
         addChild=(Button) findViewById(R.id.addRecords);
         addChild2=(Button) findViewById(R.id.addRecords2);
-        tryy=findViewById(R.id.immunized_label_text);
+        logout=findViewById(R.id.logout_txt);
+
+        profileb=(TextView) findViewById(R.id.profile);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String Total = user.getEmail();
@@ -59,6 +61,23 @@ public class MainpageActivity extends AppCompatActivity {
             }
         });
 
+        profileb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(MainpageActivity.this, ProfileditActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(MainpageActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
