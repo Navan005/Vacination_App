@@ -73,22 +73,13 @@
     <string name="profile">Profile</string>
     <string name="get_immunized">Get Immunized</string>
     <string name="vaccine_it">Vaccine It</string>
-    <string name="vaccine_label">Vaccine Label</string>
     <string name="parents_email">Parents email:</string>
     <string name="parent_name">parent name</string>
     <string name="appointment_date">Appointment Date:</string>
     <string name="select_date">Select Date</string>
     <string name="cancel_appointment">Cancel Appointment</string>
     <string name="upcoming_appointments">Upcoming Appointments</string>
-    <string name="vaccine_label">Vaccine Label</string>
-    <string name="parents_email">Parents email:</string>
-    <string name="parent_name">parent name</string>
-    <string name="appointment_date">Appointment Date:</string>
-    <string name="select_date">Select Date</string>
-    <string name="book_appointment">Book Appointment</string>
     <string name="home">Home</string>
-    <string name="appointment_history">Appointment History</string>
-    <string name="upcoming_appointments">Upcoming Appointments</string>
 
 
 </resources>
