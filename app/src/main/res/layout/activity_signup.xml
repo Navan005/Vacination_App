@@ -38,7 +38,8 @@
                 android:gravity="center"
                 android:text="@string/create_account_label"
                 android:textColor="@color/creme_white"
-                android:textSize="24sp" />
+                android:textStyle="bold"
+                android:textSize="25sp" />
 
             <EditText
                 android:id="@+id/etRegName"
@@ -53,7 +54,7 @@
                 android:inputType="text"
                 android:hint="@string/name_label"
                 android:importantForAutofill="yes"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/etRegGmail"
@@ -67,7 +68,7 @@
                 android:drawableStart="@drawable/email"
                 android:hint="@string/email_address_label"
                 android:inputType="textEmailAddress"
-                android:textSize="17sp"
+                android:textSize="20sp"
                 android:importantForAutofill="yes" />
 
             <EditText
@@ -81,7 +82,7 @@
                 android:autofillHints="@string/phone_label"
                 android:drawableStart="@drawable/phone"
                 android:inputType="phone"
-                android:textSize="17sp"
+                android:textSize="20sp"
                 android:hint="@string/phone_label"
                 android:importantForAutofill="yes" />
 
@@ -96,7 +97,7 @@
                 android:drawableStart="@drawable/eye"
                 android:textAlignment="center"
                 android:inputType="textPassword"
-                android:textSize="17sp"
+                android:textSize="20sp"
                 android:hint="@string/password_label"
                 android:importantForAutofill="yes" />
 
@@ -111,7 +112,7 @@
                 android:drawableStart="@drawable/eye"
                 android:autofillHints="@string/confirm_password_label"
                 android:inputType="textPassword"
-                android:textSize="17sp"
+                android:textSize="20sp"
                 android:hint="@string/confirm_password_label"
                 android:importantForAutofill="yes" />
 
@@ -122,7 +123,7 @@
                 android:text="@string/i_agree_to_term_and_conditions_checkbox"
                 android:layout_marginStart="15dp"
                 android:textColor="@color/Blue"
-                android:textSize="16sp"
+                android:textSize="19sp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="sans-serif-light"
                 android:textStyle="bold" />
@@ -137,6 +138,7 @@
                 android:background="@drawable/round_button"
                 android:text="@string/sign_up_label"
                 android:textColor="@color/creme_white"
+                android:textStyle="bold"
                 android:textSize="18sp" />
 
         </LinearLayout>

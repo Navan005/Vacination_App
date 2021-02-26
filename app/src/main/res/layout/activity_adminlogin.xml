@@ -39,6 +39,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="@string/employee_login_label"
                 android:textColor="@color/creme_white"
+                android:textStyle="bold"
                 android:textSize="25sp" />
 
             <TextView

@@ -28,7 +28,8 @@
         android:fontFamily="sans-serif-light"
         android:text="@string/get_immunized_text"
         android:textColor="@color/creme_white"
-        android:textSize="24sp" />
+        android:textStyle="bold"
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/introduction_text"
@@ -42,7 +43,7 @@
         android:text="@string/track_your_immunization_record_text"
         android:textColor="@color/creme_white"
         android:fontFamily="sans-serif-light"
-        android:textSize="24sp" />
+        android:textSize="25sp" />
 
     <Button
         android:id="@+id/sign_up_button"
@@ -55,6 +56,7 @@
         android:background="@drawable/round_button"
         android:text="@string/create_an_account_button_label"
         android:textColor="@color/creme_white"
+        android:textStyle="bold"
         android:textSize="18sp" />
 
     <TextView
