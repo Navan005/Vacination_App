@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:text="@string/child_name_text"
+        android:textSize="20sp"
         android:textColor="@color/Blue" />
 
 </RelativeLayout>

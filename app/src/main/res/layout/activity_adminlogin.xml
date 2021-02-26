@@ -39,7 +39,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="@string/employee_login_label"
                 android:textColor="@color/creme_white"
-                android:textSize="24sp" />
+                android:textSize="25sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/please_enter_your_email_address_and_password_label"
                 android:textColor="@color/creme_white"
-                android:textSize="18sp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/email_edit"
@@ -64,7 +64,7 @@
                 android:inputType="textEmailAddress"
                 android:textAlignment="center"
                 android:importantForAutofill="yes"
-                android:textSize="17sp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/password_edit"
@@ -75,7 +75,7 @@
                 android:layout_marginTop="15dp"
                 android:autofillHints="@string/password_label"
                 android:inputType="textPassword"
-                android:textSize="17sp"
+                android:textSize="20sp"
                 android:drawableStart="@drawable/eye"
                 android:hint="@string/password_label"
                 android:importantForAutofill="yes"
@@ -90,6 +90,7 @@
                 android:layout_marginRight="100dp"
                 android:background="@drawable/round_button"
                 android:text="@string/login"
+                android:textStyle="bold"
                 android:textColor="@color/creme_white"
                 android:textSize="18sp" />
 

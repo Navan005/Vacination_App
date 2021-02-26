@@ -37,6 +37,7 @@
                         android:textSize="24sp"
                         android:fontFamily="sans-serif-light"
                         android:layout_width="match_parent"
+                        android:textStyle="bold"
                         android:text="@string/name"
                         android:textColor="@color/Blue" />
 
@@ -46,9 +47,10 @@
                         android:gravity="center"
                         android:fontFamily="sans-serif-light"
                         android:text="@string/age"
+                        android:textStyle="bold"
                         android:layout_width="match_parent"
                         android:textColor="@color/Blue"
-                        android:textSize="18sp" />
+                        android:textSize="20sp" />
 
         </LinearLayout>
 

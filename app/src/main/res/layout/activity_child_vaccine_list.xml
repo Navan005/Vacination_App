@@ -33,6 +33,7 @@
             android:textColor="@color/creme_white"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="20sp"
             android:text="@string/child_name_label_text" />
 
         <TextView
@@ -41,6 +42,7 @@
             android:textColor="@color/creme_white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20sp"
             android:text="@string/child1" />
 
     </LinearLayout>
@@ -62,6 +64,7 @@
             android:textColor="@color/creme_white"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="20sp"
             android:text="@string/child_age_label_text" />
 
         <TextView
@@ -70,16 +73,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="20sp"
             android:text="@string/child_age" />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/delete_child"
-        android:layout_width="160dp"
+        android:layout_width="200dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/round_button"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:layout_height="wrap_content"
         android:layout_below="@id/child_age_layout"
         android:layout_centerHorizontal="true"
@@ -100,8 +104,9 @@
         android:fontFamily="sans-serif-light"
         android:text="@string/vaccines_recommended"
         android:textAlignment="center"
+        android:textStyle="bold"
         android:textColor="@color/creme_white"
-        android:textSize="24sp" />
+        android:textSize="25sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerviewVaccine"

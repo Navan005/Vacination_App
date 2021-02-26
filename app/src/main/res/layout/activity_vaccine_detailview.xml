@@ -7,15 +7,16 @@
     tools:context=".vaccine_detailview">
 
     <TextView
-        android:layout_width="match_parent"
         android:id="@+id/vaccine_name"
-        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
         android:gravity="center"
+        android:textStyle="bold"
         android:text="@string/vaccine_label"
-        android:textSize="25sp"
-        android:textColor="@color/creme_white" />
+        android:textColor="@color/creme_white"
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +34,8 @@
             android:layout_height="wrap_content"
             android:text="@string/recommended_age"
             android:textColor="@color/creme_white"
-            android:textSize="18sp" />
+            android:textStyle="bold"
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,7 +45,7 @@
             android:text="@string/vaccine_age"
             android:textColor="@color/creme_white"
             android:layout_marginStart="30dp"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -59,7 +61,8 @@
         android:gravity="center"
         android:text="@string/description_label"
         android:textColor="@color/creme_white"
-        android:textSize="18sp" />
+        android:textStyle="bold"
+        android:textSize="23sp" />
 
 
     <TextView
@@ -85,7 +88,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="100dp"
         android:background="@drawable/round_button"
-        android:text="Appointment History"
+        android:text="@string/appointment_history"
         android:textColor="@color/white" />
 
     <LinearLayout
@@ -101,21 +104,23 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:background="@drawable/round_button"
-            android:text="Home"
-            android:layout_marginLeft="70dp"
+            android:text="@string/home"
+            android:layout_marginStart="70dp"
             android:textColor="@android:color/white"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            tools:ignore="ButtonStyle" />
 
     <Button
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
         android:background="@drawable/round_button"
         android:text="@string/logout"
         android:textColor="@android:color/white"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        tools:ignore="ButtonStyle" />
 
 
 
