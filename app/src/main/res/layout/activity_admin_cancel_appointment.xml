@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,9 +8,9 @@
     <TextView
         android:layout_width="match_parent"
         android:id="@+id/vaccine_name"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:layout_height="wrap_content"
-        android:text="Vaccine Label"
+        android:text="@string/vaccine_label"
         android:textStyle="bold"
         android:textSize="25sp"
         android:layout_marginStart="10dp"
@@ -32,18 +31,18 @@
             android:id="@+id/vaccine_age_label"
             android:layout_marginTop="30dp"
             android:layout_height="wrap_content"
-            android:text="Parents email:"
+            android:text="@string/parents_email"
             android:textStyle="bold"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:id="@+id/parent_email"
             android:layout_marginTop="30dp"
             android:layout_height="wrap_content"
-            android:text="parent name"
+            android:text="@string/parent_name"
             android:layout_marginStart="60dp"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -62,18 +61,18 @@
             android:id="@+id/appointment_label"
             android:layout_marginTop="30dp"
             android:layout_height="wrap_content"
-            android:text="Appointment Date:"
+            android:text="@string/appointment_date"
             android:textStyle="bold"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:id="@+id/appointmentDate"
             android:layout_marginTop="30dp"
             android:layout_height="wrap_content"
-            android:hint="Select Date"
+            android:hint="@string/select_date"
             android:layout_marginStart="30dp"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 
@@ -87,8 +86,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="25dp"
+        android:textSize="18sp"
         android:background="@drawable/round_button"
-        android:text="Cancel Appointment"
+        android:text="@string/cancel_appointment"
         android:textColor="@color/white" />
 
 

@@ -24,7 +24,8 @@
             android:gravity="center"
             android:text="@string/add_a_child_label"
             android:textColor="@color/creme_white"
-            android:textSize="30sp" />
+            android:textSize="35sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -35,7 +36,8 @@
             android:gravity="center"
             android:text="@string/enter_details_of_your_child_label"
             android:textColor="@color/creme_white"
-            android:textSize="18sp" />
+            android:textSize="23sp"
+            />
 
         <EditText
             android:id="@+id/child_nameEditxt"
@@ -49,7 +51,7 @@
             android:inputType="textEmailAddress"
             android:hint="@string/child_name_text"
             android:textAlignment="center"
-            android:textSize="17sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -60,7 +62,7 @@
             android:gravity="center"
             android:text="@string/date_of_birth"
             android:textColor="@color/creme_white"
-            android:textSize="18sp" />
+            android:textSize="23sp" />
 
         <EditText
             android:id="@+id/dateofbirth"
@@ -74,7 +76,7 @@
             android:textAlignment="center"
             android:drawableStart="@drawable/age"
             android:inputType="number"
-            android:textSize="17sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -85,7 +87,7 @@
             android:gravity="center"
             android:text="@string/gender_label"
             android:textColor="@color/creme_white"
-            android:textSize="18sp" />
+            android:textSize="23sp" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -104,6 +106,7 @@
                 android:text="@string/male_label"
                 android:id="@+id/male_radio"
                 android:checked="true"
+                android:textSize="20sp"
                 android:textColor="@color/creme_white" />
 
             <RadioButton
@@ -113,6 +116,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/female_label"
+                android:textSize="20sp"
                 android:textColor="@color/creme_white" />
 
         </RadioGroup>
@@ -122,13 +126,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="25dp"
             android:layout_marginRight="100dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/round_button"
             android:text="@string/add_a_child_label"
             android:textColor="@color/creme_white"
-            android:textSize="15sp" />
+            android:textSize="18sp" />
 
     </LinearLayout>
 
