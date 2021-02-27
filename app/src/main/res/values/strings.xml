@@ -80,6 +80,11 @@
     <string name="cancel_appointment">Cancel Appointment</string>
     <string name="upcoming_appointments">Upcoming Appointments</string>
     <string name="home">Home</string>
+    <string name="update_info">Update info</string>
+    <string name="your_phone">Your phone</string>
+    <string name="your_email">Your email</string>
+    <string name="your_name">Your name</string>
+    <string name="edit_your_profile">Edit Your Profile</string>
 
 
 </resources>

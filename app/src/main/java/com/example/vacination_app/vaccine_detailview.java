@@ -66,9 +66,8 @@ public class vaccine_detailview extends AppCompatActivity {
                 appointments.push().setValue(member);
 
                 Toast.makeText(vaccine_detailview.this, "Appointment booked!", Toast.LENGTH_SHORT).show();
-                //Intent intent=new Intent(vaccine_detailview.this, ParentshomepageActivity.class);
-                //intent.putExtra("email", Total);
-                //startActivity(intent);
+                Intent intent=new Intent(vaccine_detailview.this, ParentshomepageActivity.class);
+                startActivity(intent);
             }
         });
 

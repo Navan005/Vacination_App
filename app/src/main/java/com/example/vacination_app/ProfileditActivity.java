@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -74,11 +75,32 @@ public class ProfileditActivity extends AppCompatActivity {
                 String emaill = email.getText().toString();
                 String phonee = phone.getText().toString();
 
+                if (TextUtils.isEmpty(fullNamee)) {
+                    name.setError("Name is Required.");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(emaill)) {
+                    email.setError("Email is Required.");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(phonee)) {
+                    phone.setError("Phone number is Required.");
+                    return;
+                }
+
+                if (phonee.length() !=10) {
+                    phone.setError("Enter a valid phone number");
+                    return;
+                }
+
+
                 DocumentReference docRef = db.collection("users").document(userId);
 
                 HashMap hashMap=new HashMap();
                 hashMap.put("fname",fullNamee);
-                hashMap.put("email",emaill);
+                //hashMap.put("email",emaill);
                 hashMap.put("phone",phonee);
 
                 docRef.set(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {

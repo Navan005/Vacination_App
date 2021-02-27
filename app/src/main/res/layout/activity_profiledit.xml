@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
 
 
@@ -23,13 +24,9 @@
             android:layout_marginRight="50dp"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
-            android:text="Edit Your Profile"
+            android:text="@string/edit_your_profile"
             android:textColor="@color/text_Color"
             android:textSize="30sp" />
-
-
-
-
 
 
         <EditText
@@ -41,7 +38,7 @@
             android:layout_marginRight="50dp"
             android:autofillHints="Email address"
             android:inputType="text"
-            android:hint="Your name"
+            android:hint="@string/your_name"
             android:textAlignment="center"
             android:textColor="@color/text_Color"
             android:textSize="17sp" />
@@ -57,10 +54,11 @@
             android:layout_marginRight="50dp"
             android:autofillHints="Email address"
             android:inputType="text"
-            android:hint="Your email"
+            android:hint="@string/your_email"
             android:textAlignment="center"
             android:textColor="@color/text_Color"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+            tools:ignore="TextFields" />
 
 
         <EditText
@@ -72,10 +70,11 @@
             android:layout_marginRight="50dp"
             android:autofillHints="Email address"
             android:inputType="text"
-            android:hint="Your email"
+            android:hint="@string/your_phone"
             android:textAlignment="center"
             android:textColor="@color/text_Color"
-            android:textSize="17sp" />
+            android:textSize="17sp"
+            tools:ignore="TextFields" />
 
 
 
@@ -90,7 +89,7 @@
             android:layout_marginRight="100dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/round_button"
-            android:text="Update info"
+            android:text="@string/update_info"
             android:textColor="@android:color/white"
             android:textSize="15sp" />
 
