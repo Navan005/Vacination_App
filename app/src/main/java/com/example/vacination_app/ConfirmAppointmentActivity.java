@@ -3,6 +3,7 @@ package com.example.vacination_app;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -17,8 +18,12 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 //CLSC confirms appointments requested by parents
@@ -85,6 +90,35 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                String verifyDateSelected=date.getText().toString();
+                String compareto="Select Date";
+                String datee = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
+                Date date1= null;
+                try {
+                    date1 = new SimpleDateFormat("dd/MM/yyyy").parse(verifyDateSelected);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                Date dateCurrent=null;
+                try {
+                     dateCurrent=new SimpleDateFormat("dd/MM/yyyy").parse(datee);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+
+                if (verifyDateSelected.equals(compareto)) {
+                    date.setError("Date is Required.");
+                    Toast.makeText(getApplicationContext(), "Date is required", Toast.LENGTH_LONG).show();
+                    return;
+                }
+
+                if (date1.before(dateCurrent)) {
+                    date.setError("Date is invalid.");
+                    Toast.makeText(getApplicationContext(), "Date invalid", Toast.LENGTH_LONG).show();
+                    return;
+                }
 
 
                 DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Appointment").child(appointmentId);
@@ -102,8 +136,7 @@ public class ConfirmAppointmentActivity extends AppCompatActivity {
                         }
                     }
                 });
-                //Intent intent = new Intent(ConfirmAppointmentActivity.this, ParentshomepageActivity.class);
-                //startActivity(intent);
+
 
             }
         });
