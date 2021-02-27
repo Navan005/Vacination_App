@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".ConfirmAppointmentActivity">
 
     <TextView
@@ -13,6 +14,7 @@
         android:text="@string/vaccine_label"
         android:textStyle="bold"
         android:textSize="25sp"
+        android:textColor="@color/creme_white"
         android:layout_marginStart="10dp"
         />
 
@@ -33,7 +35,8 @@
             android:layout_height="wrap_content"
             android:text="@string/parents_email"
             android:textStyle="bold"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="@color/creme_white"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -42,7 +45,8 @@
             android:layout_height="wrap_content"
             android:text="@string/parent_name"
             android:layout_marginStart="60dp"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="@color/creme_white"/>
 
     </LinearLayout>
 
@@ -63,6 +67,7 @@
             android:layout_height="wrap_content"
             android:text="@string/appointment_date"
             android:textStyle="bold"
+            android:textColor="@color/creme_white"
             android:textSize="20sp" />
 
         <TextView
@@ -71,7 +76,8 @@
             android:layout_marginTop="30dp"
             android:layout_height="wrap_content"
             android:hint="@string/select_date"
-            android:textColor="#FF0000"
+            android:textColor="@color/creme_white"
+            android:textColorHint="#FD0000"
             android:layout_marginStart="30dp"
             android:textSize="20sp" />
 

@@ -79,52 +79,9 @@
         android:textColor="@color/creme_white"
         android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/appointmentHistory_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/round_button"
-        android:text="@string/appointment_history"
-        android:textColor="@color/white" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="170dp">
-
-        <Button
-            android:id="@+id/homeBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:background="@drawable/round_button"
-            android:text="@string/home"
-            android:layout_marginStart="70dp"
-            android:textColor="@android:color/white"
-            android:textSize="15sp"
-            tools:ignore="ButtonStyle" />
-
-    <Button
-        android:id="@+id/logoutBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:layout_marginStart="50dp"
-        android:background="@drawable/round_button"
-        android:text="@string/logout"
-        android:textColor="@android:color/white"
-        android:textSize="15sp"
-        tools:ignore="ButtonStyle" />
 
 
 
-    </LinearLayout>
 
     <Button
         android:id="@+id/appointment_button"

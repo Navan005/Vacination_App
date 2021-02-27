@@ -4,6 +4,7 @@
     tools:context=".AppointmentHistoryActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     android:orientation="vertical">
 
 
@@ -18,7 +19,7 @@
             android:shadowColor="#000000"
             android:text="@string/appointment_history"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/creme_white"
             android:textSize="25sp" />
 
         <androidx.recyclerview.widget.RecyclerView
