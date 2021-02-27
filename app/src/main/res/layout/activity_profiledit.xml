@@ -29,6 +29,21 @@
             android:textSize="30sp" />
 
 
+        <TextView
+            android:id="@+id/emailtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="50dp"
+            android:autofillHints="Email address"
+            android:inputType="text"
+            android:hint="@string/your_email"
+            android:textAlignment="center"
+            android:textColor="@color/text_Color"
+            android:textSize="17sp"
+            tools:ignore="TextFields" />
+
         <EditText
             android:id="@+id/nametxt"
             android:layout_width="match_parent"
@@ -45,20 +60,7 @@
 
 
 
-        <EditText
-            android:id="@+id/emailtxt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="15sp"
-            android:layout_marginRight="50dp"
-            android:autofillHints="Email address"
-            android:inputType="text"
-            android:hint="@string/your_email"
-            android:textAlignment="center"
-            android:textColor="@color/text_Color"
-            android:textSize="17sp"
-            tools:ignore="TextFields" />
+
 
 
         <EditText
@@ -69,7 +71,7 @@
             android:layout_marginTop="15sp"
             android:layout_marginRight="50dp"
             android:autofillHints="Email address"
-            android:inputType="text"
+            android:inputType="number"
             android:hint="@string/your_phone"
             android:textAlignment="center"
             android:textColor="@color/text_Color"

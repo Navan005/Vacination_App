@@ -26,7 +26,8 @@ import java.util.HashMap;
 
 public class ProfileditActivity extends AppCompatActivity {
 
-    private EditText name,email,phone;
+    private EditText name, phone;
+    TextView email;
     private Button updateBtn;
     FirebaseFirestore db;
 
@@ -39,7 +40,7 @@ public class ProfileditActivity extends AppCompatActivity {
 
         updateBtn = (Button) findViewById(R.id.btn_update);
         name = (EditText) findViewById(R.id.nametxt);
-        email = (EditText) findViewById(R.id.emailtxt);
+        email = (TextView) findViewById(R.id.emailtxt);
         phone = (EditText) findViewById(R.id.phonetxt);
         db = FirebaseFirestore.getInstance();
 
@@ -100,7 +101,7 @@ public class ProfileditActivity extends AppCompatActivity {
 
                 HashMap hashMap=new HashMap();
                 hashMap.put("fname",fullNamee);
-                //hashMap.put("email",emaill);
+                hashMap.put("email",emaill);
                 hashMap.put("phone",phonee);
 
                 docRef.set(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
